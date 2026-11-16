@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-11-16T05:52:31.216Z",
+ "updatedAt": "2026-11-16T06:07:01.459Z",
  "observations": [
   {
    "ts": "2026-11-16T05:51:33.398Z",
@@ -178,6 +178,183 @@
     "mixed": false,
     "dest": "SFO"
    }
+  },
+  {
+   "ts": "2026-11-16T06:07:00.796Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-12",
+   "return": "2027-01-02",
+   "lowest": 1965,
+   "lows": {
+    "2": {
+     "any": 1965
+    }
+   },
+   "googleLevel": "high",
+   "googleTypical": [
+    720,
+    1800
+   ],
+   "cheapest": {
+    "airlines": [
+     "Delta",
+     "KLM"
+    ],
+    "stops": 2,
+    "mixed": true,
+    "dest": "LIN"
+   }
+  },
+  {
+   "ts": "2026-11-16T06:07:00.889Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-14",
+   "return": "2027-01-02",
+   "lowest": 1909,
+   "lows": {
+    "1": {
+     "any": 1930,
+     "single": 1930
+    },
+    "2": {
+     "any": 1909,
+     "single": 2242
+    }
+   },
+   "googleLevel": "high",
+   "googleTypical": [
+    720,
+    1800
+   ],
+   "cheapest": {
+    "airlines": [
+     "American",
+     "British Airways"
+    ],
+    "stops": 2,
+    "mixed": true,
+    "dest": "LIN"
+   }
+  },
+  {
+   "ts": "2026-11-16T06:07:00.995Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-16",
+   "return": "2026-12-30",
+   "lowest": 1524,
+   "lows": {
+    "1": {
+     "any": 1524,
+     "single": 1524
+    },
+    "2": {
+     "any": 1733,
+     "single": 2065
+    }
+   },
+   "googleLevel": "typical",
+   "googleTypical": [
+    720,
+    1800
+   ],
+   "cheapest": {
+    "airlines": [
+     "British Airways"
+    ],
+    "stops": 1,
+    "mixed": false,
+    "dest": "LIN"
+   }
+  },
+  {
+   "ts": "2026-11-16T06:07:01.174Z",
+   "routeId": "pdx-bay-area",
+   "outbound": "2026-12-17",
+   "return": "2026-12-20",
+   "lowest": 223,
+   "lows": {
+    "0": {
+     "any": 232,
+     "single": 232
+    },
+    "1": {
+     "any": 223,
+     "single": 223
+    }
+   },
+   "googleLevel": "typical",
+   "googleTypical": [
+    140,
+    370
+   ],
+   "cheapest": {
+    "airlines": [
+     "Frontier"
+    ],
+    "stops": 1,
+    "mixed": false,
+    "dest": "SFO"
+   }
+  },
+  {
+   "ts": "2026-11-16T06:07:01.272Z",
+   "routeId": "pdx-bay-area",
+   "outbound": "2027-01-14",
+   "return": "2027-01-17",
+   "lowest": 194,
+   "lows": {
+    "0": {
+     "any": 232,
+     "single": 232
+    },
+    "1": {
+     "any": 194,
+     "single": 194
+    }
+   },
+   "googleLevel": "typical",
+   "googleTypical": [
+    145,
+    350
+   ],
+   "cheapest": {
+    "airlines": [
+     "Frontier"
+    ],
+    "stops": 1,
+    "mixed": false,
+    "dest": "OAK"
+   }
+  },
+  {
+   "ts": "2026-11-16T06:07:01.359Z",
+   "routeId": "pdx-bay-area",
+   "outbound": "2027-02-11",
+   "return": "2027-02-14",
+   "lowest": 223,
+   "lows": {
+    "0": {
+     "any": 232,
+     "single": 232
+    },
+    "1": {
+     "any": 223,
+     "single": 223
+    }
+   },
+   "googleLevel": "typical",
+   "googleTypical": [
+    160,
+    320
+   ],
+   "cheapest": {
+    "airlines": [
+     "Frontier"
+    ],
+    "stops": 1,
+    "mixed": false,
+    "dest": "SFO"
+   }
   }
  ],
  "latest": {
@@ -186,7 +363,7 @@
     "2026-12-12_2027-01-02": {
      "outbound": "2026-12-12",
      "return": "2027-01-02",
-     "fetchedAt": "2026-11-16T05:51:33.398Z",
+     "fetchedAt": "2026-11-16T06:07:00.796Z",
      "options": [
       {
        "price": 1965,
@@ -691,6 +868,90 @@
         "LH 272"
        ],
        "top": false
+      },
+      {
+       "price": 2593,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "SN",
+         "name": "Brussels Airlines"
+        }
+       ],
+       "primary": "UA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1321,
+       "path": [
+        "PDX",
+        "ORD",
+        "BRU",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-12 10:49",
+       "arrive": "2026-12-13 17:50",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 53
+        },
+        {
+         "id": "BRU",
+         "min": 450
+        }
+       ],
+       "flightNumbers": [
+        "UA 1923",
+        "UA 972",
+        "SN 3149"
+       ],
+       "top": false
+      },
+      {
+       "price": 3849,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        },
+        {
+         "code": "BA",
+         "name": "British Airways"
+        }
+       ],
+       "primary": "BA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1010,
+       "path": [
+        "PDX",
+        "SEA",
+        "LHR",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-12 10:30",
+       "arrive": "2026-12-13 12:20",
+       "layovers": [
+        {
+         "id": "SEA",
+         "min": 120
+        },
+        {
+         "id": "LHR",
+         "min": 125
+        }
+       ],
+       "flightNumbers": [
+        "AS 3217",
+        "BA 52",
+        "BA 568"
+       ],
+       "top": false
       }
      ],
      "google": {
@@ -951,7 +1212,7 @@
     "2026-12-14_2027-01-02": {
      "outbound": "2026-12-14",
      "return": "2027-01-02",
-     "fetchedAt": "2026-11-16T05:51:39.737Z",
+     "fetchedAt": "2026-11-16T06:07:00.889Z",
      "options": [
       {
        "price": 1909,
@@ -1422,6 +1683,80 @@
         "EN 252"
        ],
        "top": false
+      },
+      {
+       "price": 2441,
+       "airlines": [
+        {
+         "code": "AC",
+         "name": "Air Canada"
+        },
+        {
+         "code": "LH",
+         "name": "Lufthansa"
+        }
+       ],
+       "primary": "LH",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 940,
+       "path": [
+        "PDX",
+        "YVR",
+        "FRA",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-14 10:00",
+       "arrive": "2026-12-15 10:40",
+       "layovers": [
+        {
+         "id": "YVR",
+         "min": 126
+        },
+        {
+         "id": "FRA",
+         "min": 75
+        }
+       ],
+       "flightNumbers": [
+        "AC 8651",
+        "LH 493",
+        "LH 248"
+       ],
+       "top": false
+      },
+      {
+       "price": 3536,
+       "airlines": [
+        {
+         "code": "BA",
+         "name": "British Airways"
+        }
+       ],
+       "primary": "BA",
+       "mixed": false,
+       "stops": 1,
+       "durationMin": 775,
+       "path": [
+        "PDX",
+        "LHR",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-14 17:45",
+       "arrive": "2026-12-15 15:40",
+       "layovers": [
+        {
+         "id": "LHR",
+         "min": 75
+        }
+       ],
+       "flightNumbers": [
+        "BA 266",
+        "BA 572"
+       ],
+       "top": false
       }
      ],
      "google": {
@@ -1682,7 +2017,7 @@
     "2026-12-16_2026-12-30": {
      "outbound": "2026-12-16",
      "return": "2026-12-30",
-     "fetchedAt": "2026-11-16T05:51:39.775Z",
+     "fetchedAt": "2026-11-16T06:07:00.995Z",
      "options": [
       {
        "price": 1524,
@@ -2411,14 +2746,14 @@
      }
     }
    },
-   "fetchedAt": "2026-11-16T05:51:39.775Z"
+   "fetchedAt": "2026-11-16T06:07:00.995Z"
   },
   "pdx-bay-area": {
    "pairs": {
     "2026-12-17_2026-12-20": {
      "outbound": "2026-12-17",
      "return": "2026-12-20",
-     "fetchedAt": "2026-11-16T05:52:04.556Z",
+     "fetchedAt": "2026-11-16T06:07:01.174Z",
      "options": [
       {
        "price": 223,
@@ -2726,6 +3061,131 @@
         "AS 236"
        ],
        "top": false
+      },
+      {
+       "price": 312,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 122,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2026-12-17 17:53",
+       "arrive": "2026-12-17 19:55",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 1393"
+       ],
+       "top": false
+      },
+      {
+       "price": 312,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 120,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2026-12-17 21:30",
+       "arrive": "2026-12-17 23:30",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 2112"
+       ],
+       "top": false
+      },
+      {
+       "price": 333,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 118,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2026-12-17 07:25",
+       "arrive": "2026-12-17 09:23",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 3071"
+       ],
+       "top": false
+      },
+      {
+       "price": 333,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 119,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2026-12-17 20:32",
+       "arrive": "2026-12-17 22:31",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 2104"
+       ],
+       "top": false
+      },
+      {
+       "price": 378,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 111,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2026-12-17 14:30",
+       "arrive": "2026-12-17 16:21",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 2283"
+       ],
+       "top": false
       }
      ],
      "google": {
@@ -2986,7 +3446,7 @@
     "2027-01-14_2027-01-17": {
      "outbound": "2027-01-14",
      "return": "2027-01-17",
-     "fetchedAt": "2026-11-16T05:52:19.339Z",
+     "fetchedAt": "2026-11-16T06:07:01.272Z",
      "options": [
       {
        "price": 194,
@@ -3301,6 +3761,156 @@
         "UA 1292"
        ],
        "top": false
+      },
+      {
+       "price": 232,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 113,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2027-01-14 17:01",
+       "arrive": "2027-01-14 18:54",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 1393"
+       ],
+       "top": false
+      },
+      {
+       "price": 232,
+       "airlines": [
+        {
+         "code": "WN",
+         "name": "Southwest"
+        }
+       ],
+       "primary": "WN",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 105,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2027-01-14 17:20",
+       "arrive": "2027-01-14 19:05",
+       "layovers": [],
+       "flightNumbers": [
+        "WN 438"
+       ],
+       "top": false
+      },
+      {
+       "price": 232,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 108,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2027-01-14 17:38",
+       "arrive": "2027-01-14 19:26",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 2104"
+       ],
+       "top": false
+      },
+      {
+       "price": 232,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 113,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2027-01-14 18:01",
+       "arrive": "2027-01-14 19:54",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 398"
+       ],
+       "top": false
+      },
+      {
+       "price": 232,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        }
+       ],
+       "primary": "UA",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 119,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2027-01-14 19:19",
+       "arrive": "2027-01-14 21:18",
+       "layovers": [],
+       "flightNumbers": [
+        "UA 2615"
+       ],
+       "top": false
+      },
+      {
+       "price": 277,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 113,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2027-01-14 11:29",
+       "arrive": "2027-01-14 13:22",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 255"
+       ],
+       "top": false
       }
      ],
      "google": {
@@ -3561,7 +4171,7 @@
     "2027-02-11_2027-02-14": {
      "outbound": "2027-02-11",
      "return": "2027-02-14",
-     "fetchedAt": "2026-11-16T05:52:26.973Z",
+     "fetchedAt": "2026-11-16T06:07:01.359Z",
      "options": [
       {
        "price": 223,
@@ -3869,6 +4479,131 @@
         "AS 526"
        ],
        "top": false
+      },
+      {
+       "price": 243,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 118,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2027-02-11 10:59",
+       "arrive": "2027-02-11 12:57",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 618"
+       ],
+       "top": false
+      },
+      {
+       "price": 277,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 114,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2027-02-11 18:05",
+       "arrive": "2027-02-11 19:59",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 1485"
+       ],
+       "top": false
+      },
+      {
+       "price": 277,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 112,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2027-02-11 21:35",
+       "arrive": "2027-02-11 23:27",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 2038"
+       ],
+       "top": false
+      },
+      {
+       "price": 293,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 116,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2027-02-11 14:41",
+       "arrive": "2027-02-11 16:37",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 650"
+       ],
+       "top": false
+      },
+      {
+       "price": 308,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        }
+       ],
+       "primary": "UA",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 126,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2027-02-11 05:15",
+       "arrive": "2027-02-11 07:21",
+       "layovers": [],
+       "flightNumbers": [
+        "UA 5611"
+       ],
+       "top": false
       }
      ],
      "google": {
@@ -4127,7 +4862,7 @@
      }
     }
    },
-   "fetchedAt": "2026-11-16T05:52:26.973Z"
+   "fetchedAt": "2026-11-16T06:07:01.359Z"
   }
  }
 }
