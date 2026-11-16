@@ -143,6 +143,12 @@ table.options td.price, table.options th.price { text-align: right; }
 table.options td.price { font-weight: 650; font-size: 1rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
 table.options .path { font-size: 0.8rem; color: var(--muted); }
 table.options .badge { margin-left: 4px; }
+a.book {
+  display: block; margin-top: 2px; font-size: 0.82rem; font-weight: 500;
+  color: var(--series-1); text-decoration: none; white-space: nowrap;
+}
+a.book:hover, a.book:focus-visible { text-decoration: underline; }
+a.book.tile-link { display: inline-block; margin-top: 8px; font-size: 0.9rem; padding: 4px 0; }
 .empty { padding: 14px 0; color: var(--muted); font-size: 0.9rem; }
 .more { font: inherit; font-size: 0.85rem; color: var(--series-1); background: none; border: 0; padding: 10px 0 0; cursor: pointer; min-height: 40px; }
 

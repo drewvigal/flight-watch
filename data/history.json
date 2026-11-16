@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-11-16T06:12:38.884Z",
+ "updatedAt": "2026-11-16T06:16:06.447Z",
  "observations": [
   {
    "ts": "2026-11-16T05:51:33.398Z",
@@ -472,6 +472,213 @@
     "mixed": true,
     "dest": "LIN"
    }
+  },
+  {
+   "ts": "2026-11-16T06:16:06.034Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-12",
+   "return": "2027-01-02",
+   "lowest": 1965,
+   "lows": {
+    "2": {
+     "any": 1965
+    }
+   },
+   "googleLevel": "high",
+   "googleTypical": [
+    720,
+    1800
+   ],
+   "cheapest": {
+    "airlines": [
+     "Delta",
+     "KLM"
+    ],
+    "stops": 2,
+    "mixed": true,
+    "dest": "LIN"
+   }
+  },
+  {
+   "ts": "2026-11-16T06:16:06.085Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-14",
+   "return": "2027-01-02",
+   "lowest": 1909,
+   "lows": {
+    "1": {
+     "any": 1930,
+     "single": 1930
+    },
+    "2": {
+     "any": 1909,
+     "single": 2242
+    }
+   },
+   "googleLevel": "high",
+   "googleTypical": [
+    720,
+    1800
+   ],
+   "cheapest": {
+    "airlines": [
+     "American",
+     "British Airways"
+    ],
+    "stops": 2,
+    "mixed": true,
+    "dest": "LIN"
+   }
+  },
+  {
+   "ts": "2026-11-16T06:16:06.131Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-16",
+   "return": "2026-12-30",
+   "lowest": 1524,
+   "lows": {
+    "1": {
+     "any": 1524,
+     "single": 1524
+    },
+    "2": {
+     "any": 1733,
+     "single": 2065
+    }
+   },
+   "googleLevel": "typical",
+   "googleTypical": [
+    720,
+    1800
+   ],
+   "cheapest": {
+    "airlines": [
+     "British Airways"
+    ],
+    "stops": 1,
+    "mixed": false,
+    "dest": "LIN"
+   }
+  },
+  {
+   "ts": "2026-11-16T06:16:06.249Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-18",
+   "return": "2027-01-02",
+   "lowest": 2504,
+   "lows": {
+    "1": {
+     "any": 2642,
+     "single": 2642
+    },
+    "2": {
+     "any": 2504
+    }
+   },
+   "googleLevel": "high",
+   "googleTypical": [
+    720,
+    2100
+   ],
+   "cheapest": {
+    "airlines": [
+     "American",
+     "British Airways"
+    ],
+    "stops": 2,
+    "mixed": true,
+    "dest": "LIN"
+   }
+  },
+  {
+   "ts": "2026-11-16T06:16:06.302Z",
+   "routeId": "pdx-bay-area",
+   "outbound": "2026-12-17",
+   "return": "2026-12-20",
+   "lowest": 223,
+   "lows": {
+    "0": {
+     "any": 232,
+     "single": 232
+    },
+    "1": {
+     "any": 223,
+     "single": 223
+    }
+   },
+   "googleLevel": "typical",
+   "googleTypical": [
+    140,
+    370
+   ],
+   "cheapest": {
+    "airlines": [
+     "Frontier"
+    ],
+    "stops": 1,
+    "mixed": false,
+    "dest": "SFO"
+   }
+  },
+  {
+   "ts": "2026-11-16T06:16:06.340Z",
+   "routeId": "pdx-bay-area",
+   "outbound": "2027-01-14",
+   "return": "2027-01-17",
+   "lowest": 194,
+   "lows": {
+    "0": {
+     "any": 232,
+     "single": 232
+    },
+    "1": {
+     "any": 194,
+     "single": 194
+    }
+   },
+   "googleLevel": "typical",
+   "googleTypical": [
+    145,
+    350
+   ],
+   "cheapest": {
+    "airlines": [
+     "Frontier"
+    ],
+    "stops": 1,
+    "mixed": false,
+    "dest": "OAK"
+   }
+  },
+  {
+   "ts": "2026-11-16T06:16:06.393Z",
+   "routeId": "pdx-bay-area",
+   "outbound": "2027-02-11",
+   "return": "2027-02-14",
+   "lowest": 223,
+   "lows": {
+    "0": {
+     "any": 232,
+     "single": 232
+    },
+    "1": {
+     "any": 223,
+     "single": 223
+    }
+   },
+   "googleLevel": "typical",
+   "googleTypical": [
+    160,
+    320
+   ],
+   "cheapest": {
+    "airlines": [
+     "Frontier"
+    ],
+    "stops": 1,
+    "mixed": false,
+    "dest": "SFO"
+   }
   }
  ],
  "latest": {
@@ -480,7 +687,7 @@
     "2026-12-12_2027-01-02": {
      "outbound": "2026-12-12",
      "return": "2027-01-02",
-     "fetchedAt": "2026-11-16T06:12:29.576Z",
+     "fetchedAt": "2026-11-16T06:16:06.034Z",
      "options": [
       {
        "price": 1965,
@@ -1324,12 +1531,13 @@
         1965
        ]
       ]
-     }
+     },
+     "url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoyEgoyMDI2LTEyLTEyKAJqBwgBEgNQRFhyBwgBEgNNWFByBwgBEgNMSU5yBwgBEgNCR1kaMhIKMjAyNy0wMS0wMigCagcIARIDTVhQagcIARIDTElOagcIARIDQkdZcgcIARIDUERYQAFIAXABmAEB&tfu=EgIIAQ"
     },
     "2026-12-14_2027-01-02": {
      "outbound": "2026-12-14",
      "return": "2027-01-02",
-     "fetchedAt": "2026-11-16T06:12:29.616Z",
+     "fetchedAt": "2026-11-16T06:16:06.085Z",
      "options": [
       {
        "price": 1909,
@@ -2129,12 +2337,13 @@
         1909
        ]
       ]
-     }
+     },
+     "url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoyEgoyMDI2LTEyLTE0KAJqBwgBEgNQRFhyBwgBEgNNWFByBwgBEgNMSU5yBwgBEgNCR1kaMhIKMjAyNy0wMS0wMigCagcIARIDTVhQagcIARIDTElOagcIARIDQkdZcgcIARIDUERYQAFIAXABmAEB&tfu=EgIIAQ"
     },
     "2026-12-16_2026-12-30": {
      "outbound": "2026-12-16",
      "return": "2026-12-30",
-     "fetchedAt": "2026-11-16T06:12:29.726Z",
+     "fetchedAt": "2026-11-16T06:16:06.131Z",
      "options": [
       {
        "price": 1524,
@@ -2860,12 +3069,13 @@
         1524
        ]
       ]
-     }
+     },
+     "url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoyEgoyMDI2LTEyLTE2KAJqBwgBEgNQRFhyBwgBEgNNWFByBwgBEgNMSU5yBwgBEgNCR1kaMhIKMjAyNi0xMi0zMCgCagcIARIDTVhQagcIARIDTElOagcIARIDQkdZcgcIARIDUERYQAFIAXABmAEB&tfu=EgIIAQ"
     },
     "2026-12-18_2027-01-02": {
      "outbound": "2026-12-18",
      "return": "2027-01-02",
-     "fetchedAt": "2026-11-16T06:12:29.769Z",
+     "fetchedAt": "2026-11-16T06:16:06.249Z",
      "options": [
       {
        "price": 2504,
@@ -3579,17 +3789,18 @@
         2504
        ]
       ]
-     }
+     },
+     "url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoyEgoyMDI2LTEyLTE4KAJqBwgBEgNQRFhyBwgBEgNNWFByBwgBEgNMSU5yBwgBEgNCR1kaMhIKMjAyNy0wMS0wMigCagcIARIDTVhQagcIARIDTElOagcIARIDQkdZcgcIARIDUERYQAFIAXABmAEB&tfu=EgIIAQ"
     }
    },
-   "fetchedAt": "2026-11-16T06:12:29.769Z"
+   "fetchedAt": "2026-11-16T06:16:06.249Z"
   },
   "pdx-bay-area": {
    "pairs": {
     "2026-12-17_2026-12-20": {
      "outbound": "2026-12-17",
      "return": "2026-12-20",
-     "fetchedAt": "2026-11-16T06:07:01.174Z",
+     "fetchedAt": "2026-11-16T06:16:06.302Z",
      "options": [
       {
        "price": 223,
@@ -4277,12 +4488,13 @@
         223
        ]
       ]
-     }
+     },
+     "url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhopEgoyMDI2LTEyLTE3KAFqBwgBEgNQRFhyBwgBEgNTRk9yBwgBEgNPQUsaKRIKMjAyNi0xMi0yMCgBagcIARIDU0ZPagcIARIDT0FLcgcIARIDUERYQAFIAXABmAEB&tfu=EgIIAQ"
     },
     "2027-01-14_2027-01-17": {
      "outbound": "2027-01-14",
      "return": "2027-01-17",
-     "fetchedAt": "2026-11-16T06:07:01.272Z",
+     "fetchedAt": "2026-11-16T06:16:06.340Z",
      "options": [
       {
        "price": 194,
@@ -5002,12 +5214,13 @@
         194
        ]
       ]
-     }
+     },
+     "url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhopEgoyMDI3LTAxLTE0KAFqBwgBEgNQRFhyBwgBEgNTRk9yBwgBEgNPQUsaKRIKMjAyNy0wMS0xNygBagcIARIDU0ZPagcIARIDT0FLcgcIARIDUERYQAFIAXABmAEB&tfu=EgIIAQ"
     },
     "2027-02-11_2027-02-14": {
      "outbound": "2027-02-11",
      "return": "2027-02-14",
-     "fetchedAt": "2026-11-16T06:07:01.359Z",
+     "fetchedAt": "2026-11-16T06:16:06.393Z",
      "options": [
       {
        "price": 223,
@@ -5695,10 +5908,11 @@
         223
        ]
       ]
-     }
+     },
+     "url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhopEgoyMDI3LTAyLTExKAFqBwgBEgNQRFhyBwgBEgNTRk9yBwgBEgNPQUsaKRIKMjAyNy0wMi0xNCgBagcIARIDU0ZPagcIARIDT0FLcgcIARIDUERYQAFIAXABmAEB&tfu=EgIIAQ"
     }
    },
-   "fetchedAt": "2026-11-16T06:07:01.359Z"
+   "fetchedAt": "2026-11-16T06:16:06.393Z"
   }
  }
 }

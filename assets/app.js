@@ -16,6 +16,12 @@ const pairLabel = (p) => `${shortDate(p.outbound)} – ${shortDate(p.return)}`;
 const tsDate = (t) => { const d = new Date(t); return `${MONTHS[d.getMonth()]} ${d.getDate()}`; };
 const duration = (min) => `${Math.floor(min / 60)}h ${String(min % 60).padStart(2, '0')}m`;
 const clock = (s) => { const [h, m] = s.slice(11).split(':').map(Number); return `${h % 12 || 12}:${String(m).padStart(2, '0')} ${h < 12 ? 'AM' : 'PM'}`; };
+const safeUrl = (u) => (typeof u === 'string' && u.startsWith('https://www.google.com/travel/flights') ? u : null);
+const flightsLink = (pair, label, cls) => {
+  const href = safeUrl(pair?.url);
+  return href && el('a', { class: cls, href, target: '_blank', rel: 'noopener noreferrer',
+    'aria-label': `${label} for ${pairLabel(pair)}, opens Google Flights` }, label, ' ↗');
+};
 const stopsText = (n) => (n === 0 ? 'Nonstop' : n === 1 ? '1 stop' : `${n} stops`);
 
 function el(tag, attrs = {}, ...children) {
@@ -249,7 +255,7 @@ function renderTable(view, rerender) {
       el('td', { class: 'stops' }, stopsText(o.stops), el('div', { class: 'path' }, o.path.join(' → ') + (o.depart ? ' · departs ' + clock(o.depart) : ''))),
       el('td', { class: 'dur' }, duration(o.durationMin)),
       allDates && el('td', { class: 'dates' }, pairLabel(o.pair)),
-      el('td', { class: 'price' }, money(o.price)),
+      el('td', { class: 'price' }, money(o.price), flightsLink(o.pair, 'Book', 'book')),
     ))),
   );
   const more = options.length > 8 && el('button', {
@@ -284,7 +290,8 @@ function renderRoute(route, card) {
     cheapest
       ? [el('div', { class: 'value' }, money(cheapest.price), ' ', level && el('span', { class: `badge ${level.level}` }, arrows[level.level])),
          el('div', { class: 'detail' }, `${cheapest.airlines.map((a) => a.name).join(' + ')} · ${stopsText(cheapest.stops)} · ${pairLabel(cheapest.pair)}`),
-         level && el('div', { class: 'basis' }, level.basis)]
+         level && el('div', { class: 'basis' }, level.basis),
+         flightsLink(cheapest.pair, 'View on Google Flights', 'book tile-link')]
       : el('div', { class: 'detail' }, 'No fares match these filters.'),
   );
 

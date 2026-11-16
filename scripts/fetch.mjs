@@ -177,7 +177,10 @@ export function parseResponse(json) {
     typical: Array.isArray(pi.typical_price_range) ? pi.typical_price_range : null,
     history: Array.isArray(pi.price_history) ? pi.price_history.filter((p) => p.length === 2) : [],
   };
-  return { options, lows, google };
+  // Link to the same search on Google Flights, for buying.
+  const link = json.search_metadata?.google_flights_url;
+  const url = typeof link === 'string' && link.startsWith('https://www.google.com/travel/flights') ? link : null;
+  return { options, lows, google, url };
 }
 
 // ---------- main ----------
@@ -234,7 +237,7 @@ async function main() {
       log(`  FAILED ${route.id} ${pair.outbound}: ${result.error}`);
       continue;
     }
-    const { options, lows, google } = parseResponse(result.json);
+    const { options, lows, google, url } = parseResponse(result.json);
     if (!options.length) {
       log(`  no fares returned for ${route.id} ${pair.outbound}`);
       continue;
@@ -259,6 +262,7 @@ async function main() {
       fetchedAt: ts,
       options: options.slice(0, settings.keepOptionsPerDatePair),
       google,
+      url,
     };
     ok++;
     log(`  ${route.id} ${pair.outbound} to ${pair.return}: from $${cheapest.price} (${options.length} options)`);
