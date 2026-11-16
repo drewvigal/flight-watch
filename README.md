@@ -28,6 +28,10 @@ node scripts/serve.mjs                          # dashboard at http://localhost:
 
 ## Editing routes
 
+You can edit `routes.json` in the browser: open the file on GitHub, click the pencil icon, change the dates, and commit to `main`. The dashboard republishes within a minute or two. Date pairs you add are searched on the next daily run (or straight away if you run the workflow from the Actions tab), whatever their `checkEveryDays` setting.
+
+Before adding dates, check the budget: each date pair costs about `31 / checkEveryDays` searches a month, and the total has to stay under your SerpApi plan's limit. If a run would go over, the fetcher skips it rather than overspend.
+
 Each route in `routes.json` has:
 
 - `origin`, `destinations`: airport codes. Several destinations are searched together in one search.
@@ -46,7 +50,7 @@ Date pairs whose outbound date has passed are skipped automatically.
 
 ## Search budget
 
-Every date pair on an enabled route costs one SerpApi search each time it is checked. The free plan allows 250 a month. The current config tracks 14 Milan date pairs every third day and 3 Bay Area pairs every second day, about 191 searches a month. `node scripts/fetch.mjs --dry-run` prints the count for the current config. Before each run the fetcher checks the account's remaining searches (that check is free) and stops if the run would dip into `settings.monthlySearchReserve`.
+Every date pair on an enabled route costs one SerpApi search each time it is checked. The free plan allows 250 a month. The current config tracks 21 Milan date pairs every fourth day and 3 Bay Area pairs every second day, about 209 searches a month. `node scripts/fetch.mjs --dry-run` prints the count for the current config. Before each run the fetcher checks the account's remaining searches (that check is free) and stops if the run would dip into `settings.monthlySearchReserve`.
 
 ## What "mixed airlines" means
 

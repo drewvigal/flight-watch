@@ -7,6 +7,7 @@
 //   node scripts/fetch.mjs --route ID  only one route
 //   node scripts/fetch.mjs --limit N   at most N searches
 //   node scripts/fetch.mjs --all       search every date pair now, ignoring checkEveryDays
+//   node scripts/fetch.mjs --only-new  search only date pairs that have no saved fares yet
 //
 // The key comes from the SERPAPI_KEY environment variable (.env locally, a
 // repository secret in GitHub Actions). It is only ever sent as the api_key
@@ -211,6 +212,8 @@ async function main() {
   // A route with checkEveryDays: N has each of its date pairs searched every
   // Nth day, staggered so the work is spread evenly. --all ignores that.
   const everything = process.argv.includes('--all');
+  const onlyNew = process.argv.includes('--only-new');
+  const saved = fs.existsSync(HISTORY_FILE) ? JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8')) : {};
   const dayNumber = Math.floor(Date.now() / 86400000);
   const jobs = [];
   const tracked = {};
@@ -223,10 +226,15 @@ async function main() {
     perMonth += (pairs.length / every) * 31;
     if (onlyRoute && route.id !== onlyRoute) continue;
     pairs.forEach((pair, i) => {
-      if (everything || (dayNumber + i) % every === 0) jobs.push({ route, pair });
+      // Date pairs with no saved fares yet (just added to routes.json) are always due.
+      const isNew = !saved.latest?.[route.id]?.pairs?.[`${pair.outbound}_${pair.return}`];
+      const due = onlyNew ? isNew : everything || isNew || (dayNumber + i) % every === 0;
+      if (due) jobs.push({ route, pair, isNew });
     });
   }
-  const cap = everything ? limit : Math.min(limit, settings.maxSearchesPerRun);
+  // New date pairs go first so they are not squeezed out by the per-run cap.
+  jobs.sort((x, y) => Number(y.isNew) - Number(x.isNew));
+  const cap = everything || onlyNew ? limit : Math.min(limit, settings.maxSearchesPerRun);
   const planned = jobs.slice(0, cap);
 
   log(`Planned searches this run: ${planned.length}` + (jobs.length > planned.length ? ` (of ${jobs.length}; capped)` : ''));
