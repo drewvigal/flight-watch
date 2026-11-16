@@ -1,1 +1,50 @@
 # flight-watch
+
+A personal fare-watching dashboard. A GitHub Actions workflow queries Google Flights (through SerpApi) once a day for the routes in `routes.json`, appends the results to `data/history.json`, and publishes a static dashboard with GitHub Pages. No server, no database, no npm dependencies.
+
+## Files
+
+| File | What it is |
+|---|---|
+| `routes.json` | Your routes, airline ranking and search budget settings. Edit this. |
+| `scripts/fetch.mjs` | The fetcher. Reads `SERPAPI_KEY` from the environment or `.env`. |
+| `data/history.json` | Fare history, appended on every run. |
+| `index.html`, `assets/` | The dashboard. |
+| `scripts/serve.mjs` | Local preview server. |
+| `.github/workflows/fetch-fares.yml` | Daily schedule, manual trigger, and Pages publish. |
+
+## Run it locally
+
+Requires Node 22 or newer.
+
+```bash
+echo "SERPAPI_KEY=paste-your-key-here" > .env   # then put your real key in the file
+node scripts/fetch.mjs --dry-run                # list planned searches, spends nothing
+node scripts/fetch.mjs                          # fetch for real
+node scripts/serve.mjs                          # dashboard at http://localhost:8765
+```
+
+`.env` is git-ignored. The key is only ever sent as the `api_key` URL parameter and is scrubbed from all log output.
+
+## Editing routes
+
+Each route in `routes.json` has:
+
+- `origin`, `destinations`: airport codes. Several destinations are searched together in one search.
+- `maxStops` (0, 1 or 2) and `preferredStops`.
+- `enabled`: set to `false` to pause a route. Paused routes stay in the file and keep their history, and the dashboard lists them so you can turn them back on.
+- Dates, one of:
+  - `datePairs`: explicit `{ "outbound": "YYYY-MM-DD", "return": "YYYY-MM-DD" }` entries, or
+  - `window` (`earliestDeparture`, `latestReturn`) with `tripLengthNights`, optional `departWeekdays` (`"Thu"` etc.) and `maxDatePairs`. The fetcher picks that many date pairs spread evenly across the window and tracks the same ones every day.
+
+Date pairs whose outbound date has passed are skipped automatically.
+
+`preferredAirlines` is your ranking, most preferred first, by two-letter airline code.
+
+## Search budget
+
+Every date pair on an enabled route costs one SerpApi search per run. The free plan allows 250 a month. The current config runs 7 searches a day, about 217 a month. `node scripts/fetch.mjs --dry-run` prints the count for the current config. Before each run the fetcher checks the account's remaining searches (that check is free) and stops if the run would dip into `settings.monthlySearchReserve`.
+
+## What "mixed airlines" means
+
+An option is flagged as mixed when its outbound journey uses more than one airline. The first search response only describes the outbound journey, with the round-trip total price; looking up the return flights costs an extra search per option, so the return carrier is not checked.

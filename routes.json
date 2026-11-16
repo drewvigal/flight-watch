@@ -1,0 +1,49 @@
+{
+  "settings": {
+    "currency": "USD",
+    "maxSearchesPerRun": 8,
+    "keepOptionsPerDatePair": 20,
+    "monthlySearchReserve": 10
+  },
+  "preferredAirlines": [
+    { "code": "DL", "name": "Delta" },
+    { "code": "AS", "name": "Alaska" },
+    { "code": "UA", "name": "United" },
+    { "code": "AA", "name": "American" },
+    { "code": "KL", "name": "KLM" },
+    { "code": "AF", "name": "Air France" }
+  ],
+  "routes": [
+    {
+      "id": "pdx-milan-holidays-2026",
+      "name": "Portland to Milan",
+      "enabled": true,
+      "origin": ["PDX"],
+      "destinations": ["MXP", "LIN", "BGY"],
+      "tripType": "round_trip",
+      "maxStops": 2,
+      "preferredStops": 1,
+      "window": { "earliestDeparture": "2026-12-12", "latestReturn": "2027-01-02" },
+      "datePairs": [
+        { "outbound": "2026-12-12", "return": "2027-01-02" },
+        { "outbound": "2026-12-14", "return": "2027-01-02" },
+        { "outbound": "2026-12-16", "return": "2026-12-30" },
+        { "outbound": "2026-12-19", "return": "2027-01-02" }
+      ]
+    },
+    {
+      "id": "pdx-bay-area",
+      "name": "Portland to Bay Area",
+      "enabled": true,
+      "origin": ["PDX"],
+      "destinations": ["SFO", "OAK"],
+      "tripType": "round_trip",
+      "maxStops": 1,
+      "preferredStops": 0,
+      "window": { "earliestDeparture": "2026-12-01", "latestReturn": "2027-02-28" },
+      "tripLengthNights": [3, 4],
+      "departWeekdays": ["Thu"],
+      "maxDatePairs": 3
+    }
+  ]
+}

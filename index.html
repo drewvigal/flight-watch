@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Flight watch</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Flight watch</h1>
+    <p id="updated" class="muted">Loading fares…</p>
+  </header>
+
+  <form id="filters" class="filters" aria-label="Filters">
+    <label>Max stops
+      <select id="f-stops">
+        <option value="9">Any</option>
+        <option value="0">Nonstop</option>
+        <option value="1">1 stop</option>
+        <option value="2">2 stops</option>
+      </select>
+    </label>
+    <label class="check"><input type="checkbox" id="f-preferred"> Preferred airlines only</label>
+    <label class="check"><input type="checkbox" id="f-mixed" checked> Show mixed-airline trips</label>
+  </form>
+
+  <main id="routes"></main>
+  <section id="paused" class="paused" hidden></section>
+
+  <footer class="muted">
+    Prices are round-trip totals per adult in economy, from Google Flights via SerpApi.
+    “Mixed” means the outbound journey uses more than one airline; the return carrier is not checked.
+  </footer>
+
+  <div id="tip" class="tip" hidden></div>
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+name: Fetch fares and publish dashboard
+
+on:
+  schedule:
+    # Once a day at 14:17 UTC (about 6:17 am Pacific in winter, 7:17 am in summer).
+    # 7 searches a run is about 217 a month, under the 250 on SerpApi's free plan.
+    - cron: '17 14 * * *'
+  workflow_dispatch:
+    inputs:
+      fetch:
+        description: 'Fetch new fares (uses SerpApi searches). Untick to only republish the dashboard.'
+        type: boolean
+        default: true
+  push:
+    branches: [main]
+    paths: ['index.html', 'assets/**', 'routes.json', '.github/workflows/fetch-fares.yml']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: fetch-fares
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch fares
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: node scripts/fetch.mjs
+      - name: Commit updated history
+        run: |
+          if git diff --quiet -- data/history.json; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/history.json
+          git commit -m "Update fare history"
+          git push
+
+  publish:
+    needs: fetch
+    if: ${{ !cancelled() && (needs.fetch.result == 'success' || needs.fetch.result == 'skipped') }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - name: Assemble site
+        run: |
+          mkdir -p _site/data
+          cp index.html routes.json _site/
+          cp -r assets _site/
+          cp data/history.json _site/data/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
