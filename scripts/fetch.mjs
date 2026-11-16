@@ -6,6 +6,7 @@
 //   node scripts/fetch.mjs --dry-run   show what would be searched, spend nothing
 //   node scripts/fetch.mjs --route ID  only one route
 //   node scripts/fetch.mjs --limit N   at most N searches
+//   node scripts/fetch.mjs --all       search every date pair now, ignoring checkEveryDays
 //
 // The key comes from the SERPAPI_KEY environment variable (.env locally, a
 // repository secret in GitHub Actions). It is only ever sent as the api_key
@@ -59,11 +60,23 @@ function arg(name) {
  * lengths and we pick maxDatePairs of them, evenly spread. The pick is made
  * over the whole window (not just future dates) so the same dates are
  * tracked day after day; pairs whose outbound date has passed are dropped.
+ * A route with returnDates instead tracks every departure day in its window
+ * against each of those return dates.
  */
 export function datePairsFor(route, today) {
   let pairs;
   if (Array.isArray(route.datePairs) && route.datePairs.length) {
     pairs = route.datePairs.map((p) => ({ outbound: p.outbound, return: p.return }));
+  } else if (route.returnDates?.length && route.window) {
+    // Grid: every departure day in the window, paired with each return date.
+    const minNights = route.minNights ?? 1;
+    pairs = [];
+    const lastOut = toDate(route.window.latestDeparture);
+    for (let d = toDate(route.window.earliestDeparture); d <= lastOut; d = addDays(d, 1)) {
+      for (const back of route.returnDates) {
+        if ((toDate(back) - d) / 86400000 >= minNights) pairs.push({ outbound: fmtDate(d), return: back });
+      }
+    }
   } else {
     const w = route.window;
     if (!w) return [];
@@ -195,17 +208,30 @@ async function main() {
   const settings = { currency: 'USD', maxSearchesPerRun: 8, keepOptionsPerDatePair: 12, monthlySearchReserve: 10, ...config.settings };
   const today = fmtDate(new Date());
 
+  // A route with checkEveryDays: N has each of its date pairs searched every
+  // Nth day, staggered so the work is spread evenly. --all ignores that.
+  const everything = process.argv.includes('--all');
+  const dayNumber = Math.floor(Date.now() / 86400000);
   const jobs = [];
+  const tracked = {};
+  let perMonth = 0;
   for (const route of config.routes) {
     if (!route.enabled) continue;
+    const every = Math.max(1, route.checkEveryDays ?? 1);
+    const pairs = datePairsFor(route, today);
+    tracked[route.id] = new Set(pairs.map((p) => `${p.outbound}_${p.return}`));
+    perMonth += (pairs.length / every) * 31;
     if (onlyRoute && route.id !== onlyRoute) continue;
-    for (const pair of datePairsFor(route, today)) jobs.push({ route, pair });
+    pairs.forEach((pair, i) => {
+      if (everything || (dayNumber + i) % every === 0) jobs.push({ route, pair });
+    });
   }
-  const planned = jobs.slice(0, Math.min(limit, settings.maxSearchesPerRun));
+  const cap = everything ? limit : Math.min(limit, settings.maxSearchesPerRun);
+  const planned = jobs.slice(0, cap);
 
   log(`Planned searches this run: ${planned.length}` + (jobs.length > planned.length ? ` (of ${jobs.length}; capped)` : ''));
   for (const j of planned) log(`  ${j.route.id}  ${j.pair.outbound} to ${j.pair.return}`);
-  log(`At one run a day that is about ${planned.length * 31} searches a month.`);
+  log(`At one run a day the current config uses about ${Math.round(perMonth)} searches a month.`);
 
   if (dryRun) return;
   if (!planned.length) { log('Nothing to search.'); return; }
@@ -268,9 +294,11 @@ async function main() {
     log(`  ${route.id} ${pair.outbound} to ${pair.return}: from $${cheapest.price} (${options.length} options)`);
   }
 
-  // Drop "latest" date pairs whose outbound date has passed.
-  for (const slot of Object.values(history.latest)) {
-    for (const [k, p] of Object.entries(slot.pairs)) if (p.outbound < today) delete slot.pairs[k];
+  // Drop "latest" date pairs that have passed or are no longer tracked.
+  for (const [routeId, slot] of Object.entries(history.latest)) {
+    for (const [k, p] of Object.entries(slot.pairs)) {
+      if (p.outbound < today || (tracked[routeId] && !tracked[routeId].has(k))) delete slot.pairs[k];
+    }
   }
 
   if (ok) {

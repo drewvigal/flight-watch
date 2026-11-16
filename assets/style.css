@@ -88,6 +88,33 @@ body {
 }
 .chip[aria-pressed=true] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
 
+.dates { margin-bottom: 12px; }
+.dates-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin-bottom: 6px; font-size: 0.9rem; }
+.dates-label { width: 3.6em; font-weight: 600; }
+.dates select, .other input[type=date] {
+  font: inherit; font-size: 0.9rem; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--axis); border-radius: 8px; padding: 6px 8px; min-height: 38px;
+}
+.dates .dates-row select { flex: 1 1 0; min-width: 0; max-width: 11em; }
+.dates select:disabled { color: var(--muted); }
+.basis { font-size: 0.78rem; color: var(--muted); }
+
+.bydates { margin: 0 0 14px; }
+.bydates h3, .other summary { margin: 0 0 4px; font-size: 0.95rem; font-weight: 600; }
+.bydates ul { list-style: none; margin: 0; padding: 0; }
+.bydates li {
+  display: grid; grid-template-columns: 1fr auto; gap: 0 10px; align-items: start;
+  padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem;
+}
+.bydates .bd-dates { grid-column: 1; font-weight: 600; }
+.bydates .bd-dates .muted { font-weight: 400; }
+.bydates .bd-detail { grid-column: 1; font-size: 0.8rem; }
+.bydates .bd-price { grid-column: 2; grid-row: 1 / span 2; text-align: right; font-weight: 650; font-variant-numeric: tabular-nums; }
+.other { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
+.other summary { cursor: pointer; min-height: 32px; }
+.other a.book { display: inline-block; font-size: 0.9rem; padding: 6px 0; }
+.other a.book[aria-disabled=true] { color: var(--muted); pointer-events: none; }
+
 .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
 .tile { border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; min-width: 0; }
 .tile .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }

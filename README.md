@@ -37,13 +37,16 @@ Each route in `routes.json` has:
   - `datePairs`: explicit `{ "outbound": "YYYY-MM-DD", "return": "YYYY-MM-DD" }` entries, or
   - `window` (`earliestDeparture`, `latestReturn`) with `tripLengthNights`, optional `departWeekdays` (`"Thu"` etc.) and `maxDatePairs`. The fetcher picks that many date pairs spread evenly across the window and tracks the same ones every day.
 
+  - or `window` (`earliestDeparture`, `latestDeparture`) with `returnDates` and `minNights`: every departure day in the window is paired with each return date.
+- `checkEveryDays` (optional): search each of the route's date pairs only every Nth day, staggered across days, so more dates fit in the budget. `node scripts/fetch.mjs --all` searches everything at once.
+
 Date pairs whose outbound date has passed are skipped automatically.
 
 `preferredAirlines` is your ranking, most preferred first, by two-letter airline code.
 
 ## Search budget
 
-Every date pair on an enabled route costs one SerpApi search per run. The free plan allows 250 a month. The current config runs 7 searches a day, about 217 a month. `node scripts/fetch.mjs --dry-run` prints the count for the current config. Before each run the fetcher checks the account's remaining searches (that check is free) and stops if the run would dip into `settings.monthlySearchReserve`.
+Every date pair on an enabled route costs one SerpApi search each time it is checked. The free plan allows 250 a month. The current config tracks 14 Milan date pairs every third day and 3 Bay Area pairs every second day, about 191 searches a month. `node scripts/fetch.mjs --dry-run` prints the count for the current config. Before each run the fetcher checks the account's remaining searches (that check is free) and stops if the run would dip into `settings.monthlySearchReserve`.
 
 ## What "mixed airlines" means
 

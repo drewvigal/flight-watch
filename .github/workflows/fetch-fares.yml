@@ -3,7 +3,8 @@ name: Fetch fares and publish dashboard
 on:
   schedule:
     # Once a day at 14:17 UTC (about 6:17 am Pacific in winter, 7:17 am in summer).
-    # 7 searches a run is about 217 a month, under the 250 on SerpApi's free plan.
+    # The config in routes.json uses about 191 searches a month, under the 250 on
+    # SerpApi's free plan. Run `node scripts/fetch.mjs --dry-run` to see the count.
     - cron: '17 14 * * *'
   workflow_dispatch:
     inputs:
