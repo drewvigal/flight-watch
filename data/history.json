@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-11-16T23:26:50.890Z",
+ "updatedAt": "2026-11-17T22:29:57.903Z",
  "observations": [
   {
    "ts": "2026-11-16T05:51:33.398Z",
@@ -1454,6 +1454,205 @@
      "Frontier"
     ],
     "stops": 1,
+    "mixed": false,
+    "dest": "SFO"
+   }
+  },
+  {
+   "ts": "2026-11-17T22:28:30.992Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-12",
+   "return": "2027-01-03",
+   "lowest": 2024,
+   "lows": {
+    "2": {
+     "any": 2024
+    }
+   },
+   "googleLevel": "high",
+   "googleTypical": [
+    720,
+    1800
+   ],
+   "cheapest": {
+    "airlines": [
+     "American",
+     "British Airways"
+    ],
+    "stops": 2,
+    "mixed": true,
+    "dest": "LIN"
+   }
+  },
+  {
+   "ts": "2026-11-17T22:28:52.498Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-14",
+   "return": "2027-01-01",
+   "lowest": 1616,
+   "lows": {
+    "1": {
+     "any": 1828,
+     "single": 1828
+    },
+    "2": {
+     "any": 1616
+    }
+   },
+   "googleLevel": "typical",
+   "googleTypical": [
+    720,
+    1800
+   ],
+   "cheapest": {
+    "airlines": [
+     "United",
+     "Lufthansa"
+    ],
+    "stops": 2,
+    "mixed": true,
+    "dest": "MXP"
+   }
+  },
+  {
+   "ts": "2026-11-17T22:29:05.424Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-15",
+   "return": "2027-01-02",
+   "lowest": 2253,
+   "lows": {
+    "2": {
+     "any": 2253,
+     "single": 2253
+    }
+   },
+   "googleLevel": "high",
+   "googleTypical": [
+    720,
+    1800
+   ],
+   "cheapest": {
+    "airlines": [
+     "Air Canada"
+    ],
+    "stops": 2,
+    "mixed": false,
+    "dest": "MXP"
+   }
+  },
+  {
+   "ts": "2026-11-17T22:29:22.352Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-16",
+   "return": "2027-01-03",
+   "lowest": 2266,
+   "lows": {
+    "1": {
+     "any": 2266,
+     "single": 2266
+    },
+    "2": {
+     "any": 2338,
+     "single": 2338
+    }
+   },
+   "googleLevel": "high",
+   "googleTypical": [
+    720,
+    1800
+   ],
+   "cheapest": {
+    "airlines": [
+     "British Airways"
+    ],
+    "stops": 1,
+    "mixed": false,
+    "dest": "MXP"
+   }
+  },
+  {
+   "ts": "2026-11-17T22:29:35.380Z",
+   "routeId": "pdx-milan-holidays-2026",
+   "outbound": "2026-12-18",
+   "return": "2027-01-01",
+   "lowest": 2185,
+   "lows": {
+    "1": {
+     "any": 2185,
+     "single": 2231
+    },
+    "2": {
+     "any": 2239,
+     "single": 2311
+    }
+   },
+   "googleLevel": "high",
+   "googleTypical": [
+    730,
+    2100
+   ],
+   "cheapest": {
+    "airlines": [
+     "Alaska",
+     "American"
+    ],
+    "stops": 1,
+    "mixed": true,
+    "dest": "MXP"
+   }
+  },
+  {
+   "ts": "2026-11-17T22:29:45.743Z",
+   "routeId": "pdx-bay-area",
+   "outbound": "2026-12-17",
+   "return": "2026-12-20",
+   "lowest": 222,
+   "lows": {
+    "0": {
+     "any": 222,
+     "single": 222
+    },
+    "1": {
+     "any": 243,
+     "single": 243
+    }
+   },
+   "googleLevel": "typical",
+   "googleTypical": [
+    140,
+    370
+   ],
+   "cheapest": {
+    "airlines": [
+     "Southwest"
+    ],
+    "stops": 0,
+    "mixed": false,
+    "dest": "OAK"
+   }
+  },
+  {
+   "ts": "2026-11-17T22:29:49.327Z",
+   "routeId": "pdx-bay-area",
+   "outbound": "2027-02-11",
+   "return": "2027-02-14",
+   "lowest": 227,
+   "lows": {
+    "0": {
+     "any": 227,
+     "single": 227
+    }
+   },
+   "googleLevel": "typical",
+   "googleTypical": [
+    160,
+    320
+   ],
+   "cheapest": {
+    "airlines": [
+     "United"
+    ],
+    "stops": 0,
     "mixed": false,
     "dest": "SFO"
    }
@@ -6667,48 +6866,52 @@
     "2026-12-14_2027-01-01": {
      "outbound": "2026-12-14",
      "return": "2027-01-01",
-     "fetchedAt": "2026-11-16T15:01:26.325Z",
+     "fetchedAt": "2026-11-17T22:28:52.498Z",
      "options": [
       {
-       "price": 1503,
+       "price": 1616,
        "airlines": [
         {
-         "code": "AC",
-         "name": "Air Canada"
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "LH",
+         "name": "Lufthansa"
         }
        ],
-       "primary": "AC",
-       "mixed": false,
+       "primary": "LH",
+       "mixed": true,
        "stops": 2,
-       "durationMin": 1085,
+       "durationMin": 1024,
        "path": [
         "PDX",
-        "YVR",
-        "YUL",
+        "ORD",
+        "MUC",
         "MXP"
        ],
        "dest": "MXP",
-       "depart": "2026-12-14 07:00",
-       "arrive": "2026-12-15 10:05",
+       "depart": "2026-12-14 14:26",
+       "arrive": "2026-12-15 16:30",
        "layovers": [
         {
-         "id": "YVR",
-         "min": 206
+         "id": "ORD",
+         "min": 82
         },
         {
-         "id": "YUL",
-         "min": 45
+         "id": "MUC",
+         "min": 125
         }
        ],
        "flightNumbers": [
-        "AC 8649",
-        "AC 306",
-        "AC 894"
+        "UA 2822",
+        "LH 435",
+        "LH 1856"
        ],
        "top": false
       },
       {
-       "price": 1518,
+       "price": 1618,
        "airlines": [
         {
          "code": "UA",
@@ -6722,197 +6925,81 @@
        "primary": "UA",
        "mixed": true,
        "stops": 2,
-       "durationMin": 1097,
+       "durationMin": 1031,
        "path": [
         "PDX",
-        "ORD",
+        "SFO",
         "FRA",
         "MXP"
        ],
        "dest": "MXP",
-       "depart": "2026-12-14 10:43",
-       "arrive": "2026-12-15 14:00",
+       "depart": "2026-12-14 15:44",
+       "arrive": "2026-12-15 17:55",
        "layovers": [
         {
-         "id": "ORD",
-         "min": 81
+         "id": "SFO",
+         "min": 68
         },
         {
          "id": "FRA",
-         "min": 190
+         "min": 105
         }
        ],
        "flightNumbers": [
-        "UA 1923",
-        "UA 907",
-        "EN 250"
-       ],
-       "top": false
-      },
-      {
-       "price": 1603,
-       "airlines": [
-        {
-         "code": "KL",
-         "name": "KLM"
-        }
-       ],
-       "primary": "KL",
-       "mixed": false,
-       "stops": 1,
-       "durationMin": 820,
-       "path": [
-        "PDX",
-        "AMS",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-14 13:20",
-       "arrive": "2026-12-15 12:00",
-       "layovers": [
-        {
-         "id": "AMS",
-         "min": 145
-        }
-       ],
-       "flightNumbers": [
-        "KL 616",
-        "KL 1597"
+        "UA 1292",
+        "UA 926",
+        "EN 252"
        ],
        "top": true
       },
       {
-       "price": 1603,
+       "price": 1623,
        "airlines": [
         {
-         "code": "DL",
-         "name": "Delta"
+         "code": "UA",
+         "name": "United"
         },
-        {
-         "code": "AF",
-         "name": "Air France"
-        }
-       ],
-       "primary": "DL",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1015,
-       "path": [
-        "PDX",
-        "ATL",
-        "CDG",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-14 06:50",
-       "arrive": "2026-12-15 08:45",
-       "layovers": [
-        {
-         "id": "ATL",
-         "min": 78
-        },
-        {
-         "id": "CDG",
-         "min": 60
-        }
-       ],
-       "flightNumbers": [
-        "DL 662",
-        "DL 82",
-        "AF 1212"
-       ],
-       "top": true
-      },
-      {
-       "price": 1608,
-       "airlines": [
-        {
-         "code": "DL",
-         "name": "Delta"
-        },
-        {
-         "code": "KL",
-         "name": "KLM"
-        }
-       ],
-       "primary": "KL",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1070,
-       "path": [
-        "PDX",
-        "JFK",
-        "AMS",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-14 07:10",
-       "arrive": "2026-12-15 10:00",
-       "layovers": [
-        {
-         "id": "JFK",
-         "min": 91
-        },
-        {
-         "id": "AMS",
-         "min": 145
-        }
-       ],
-       "flightNumbers": [
-        "DL 451",
-        "KL 642",
-        "KL 1613"
-       ],
-       "top": false
-      },
-      {
-       "price": 1622,
-       "airlines": [
-        {
-         "code": "DL",
-         "name": "Delta"
-        },
-        {
-         "code": "AF",
-         "name": "Air France"
-        }
-       ],
-       "primary": "AF",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1011,
-       "path": [
-        "PDX",
-        "LAX",
-        "CDG",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-14 17:29",
-       "arrive": "2026-12-15 19:20",
-       "layovers": [
-        {
-         "id": "LAX",
-         "min": 76
-        },
-        {
-         "id": "CDG",
-         "min": 60
-        }
-       ],
-       "flightNumbers": [
-        "DL 2551",
-        "AF 29",
-        "AF 1312"
-       ],
-       "top": false
-      },
-      {
-       "price": 1702,
-       "airlines": [
         {
          "code": "AC",
          "name": "Air Canada"
+        }
+       ],
+       "primary": "AC",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1085,
+       "path": [
+        "PDX",
+        "ORD",
+        "YUL",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-14 07:00",
+       "arrive": "2026-12-15 10:05",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 158
+        },
+        {
+         "id": "YUL",
+         "min": 73
+        }
+       ],
+       "flightNumbers": [
+        "UA 2306",
+        "AC 8484",
+        "AC 894"
+       ],
+       "top": false
+      },
+      {
+       "price": 1631,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
         },
         {
          "code": "LH",
@@ -6922,35 +7009,77 @@
        "primary": "LH",
        "mixed": true,
        "stops": 2,
-       "durationMin": 940,
+       "durationMin": 1164,
        "path": [
         "PDX",
-        "YVR",
-        "FRA",
-        "MXP"
+        "ORD",
+        "MUC",
+        "LIN"
        ],
-       "dest": "MXP",
-       "depart": "2026-12-14 10:00",
-       "arrive": "2026-12-15 10:40",
+       "dest": "LIN",
+       "depart": "2026-12-14 14:26",
+       "arrive": "2026-12-15 18:50",
        "layovers": [
         {
-         "id": "YVR",
-         "min": 126
+         "id": "ORD",
+         "min": 82
         },
         {
-         "id": "FRA",
-         "min": 75
+         "id": "MUC",
+         "min": 270
         }
        ],
        "flightNumbers": [
-        "AC 8651",
-        "LH 493",
-        "LH 248"
+        "UA 2822",
+        "LH 435",
+        "LH 1888"
        ],
        "top": false
       },
       {
-       "price": 1706,
+       "price": 1693,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "LX",
+         "name": "SWISS"
+        }
+       ],
+       "primary": "LX",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1066,
+       "path": [
+        "PDX",
+        "SFO",
+        "ZRH",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-14 15:44",
+       "arrive": "2026-12-15 18:30",
+       "layovers": [
+        {
+         "id": "SFO",
+         "min": 108
+        },
+        {
+         "id": "ZRH",
+         "min": 125
+        }
+       ],
+       "flightNumbers": [
+        "UA 1292",
+        "LX 39",
+        "LX 1622"
+       ],
+       "top": false
+      },
+      {
+       "price": 1809,
        "airlines": [
         {
          "code": "UA",
@@ -6992,7 +7121,155 @@
        "top": false
       },
       {
-       "price": 1720,
+       "price": 1828,
+       "airlines": [
+        {
+         "code": "BA",
+         "name": "British Airways"
+        }
+       ],
+       "primary": "BA",
+       "mixed": false,
+       "stops": 1,
+       "durationMin": 1015,
+       "path": [
+        "PDX",
+        "LHR",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-14 17:45",
+       "arrive": "2026-12-15 19:40",
+       "layovers": [
+        {
+         "id": "LHR",
+         "min": 325
+        }
+       ],
+       "flightNumbers": [
+        "BA 266",
+        "BA 7305"
+       ],
+       "top": false
+      },
+      {
+       "price": 1942,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        },
+        {
+         "code": "AF",
+         "name": "Air France"
+        }
+       ],
+       "primary": "DL",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1043,
+       "path": [
+        "PDX",
+        "SEA",
+        "CDG",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-14 11:32",
+       "arrive": "2026-12-15 13:55",
+       "layovers": [
+        {
+         "id": "SEA",
+         "min": 160
+        },
+        {
+         "id": "CDG",
+         "min": 105
+        }
+       ],
+       "flightNumbers": [
+        "DL 3818",
+        "DL 80",
+        "AF 1012"
+       ],
+       "top": false
+      },
+      {
+       "price": 1952,
+       "airlines": [
+        {
+         "code": "KL",
+         "name": "KLM"
+        }
+       ],
+       "primary": "KL",
+       "mixed": false,
+       "stops": 1,
+       "durationMin": 820,
+       "path": [
+        "PDX",
+        "AMS",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-14 13:20",
+       "arrive": "2026-12-15 12:00",
+       "layovers": [
+        {
+         "id": "AMS",
+         "min": 145
+        }
+       ],
+       "flightNumbers": [
+        "KL 616",
+        "KL 1597"
+       ],
+       "top": true
+      },
+      {
+       "price": 1976,
+       "airlines": [
+        {
+         "code": "AA",
+         "name": "American"
+        },
+        {
+         "code": "BA",
+         "name": "British Airways"
+        }
+       ],
+       "primary": "BA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1070,
+       "path": [
+        "PDX",
+        "ORD",
+        "LHR",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-14 13:30",
+       "arrive": "2026-12-15 16:20",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 126
+        },
+        {
+         "id": "LHR",
+         "min": 100
+        }
+       ],
+       "flightNumbers": [
+        "AA 562",
+        "BA 296",
+        "BA 584"
+       ],
+       "top": false
+      },
+      {
+       "price": 2025,
        "airlines": [
         {
          "code": "BA",
@@ -7024,49 +7301,7 @@
        "top": false
       },
       {
-       "price": 1747,
-       "airlines": [
-        {
-         "code": "AA",
-         "name": "American"
-        },
-        {
-         "code": "BA",
-         "name": "British Airways"
-        }
-       ],
-       "primary": "AA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1030,
-       "path": [
-        "PDX",
-        "ORD",
-        "LHR",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-14 13:30",
-       "arrive": "2026-12-15 15:40",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 46
-        },
-        {
-         "id": "LHR",
-         "min": 130
-        }
-       ],
-       "flightNumbers": [
-        "AA 562",
-        "AA 90",
-        "BA 572"
-       ],
-       "top": false
-      },
-      {
-       "price": 1776,
+       "price": 2026,
        "airlines": [
         {
          "code": "BA",
@@ -7099,17 +7334,13 @@
       }
      ],
      "google": {
-      "lowest": 1503,
+      "lowest": 1616,
       "level": "typical",
       "typical": [
        720,
        1800
       ],
       "history": [
-       [
-        1789628400,
-        1225
-       ],
        [
         1789714800,
         1259
@@ -7349,6 +7580,10 @@
        [
         1794816000,
         1503
+       ],
+       [
+        1794902400,
+        1616
        ]
       ]
      },
@@ -11358,10 +11593,78 @@
     "2026-12-18_2027-01-01": {
      "outbound": "2026-12-18",
      "return": "2027-01-01",
-     "fetchedAt": "2026-11-16T15:03:28.562Z",
+     "fetchedAt": "2026-11-17T22:29:35.380Z",
      "options": [
       {
-       "price": 2163,
+       "price": 2185,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        },
+        {
+         "code": "AA",
+         "name": "American"
+        }
+       ],
+       "primary": "AA",
+       "mixed": true,
+       "stops": 1,
+       "durationMin": 1535,
+       "path": [
+        "PDX",
+        "EWR",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-18 21:30",
+       "arrive": "2026-12-20 08:05",
+       "layovers": [
+        {
+         "id": "EWR",
+         "min": 726
+        }
+       ],
+       "flightNumbers": [
+        "AS 212",
+        "AA 198"
+       ],
+       "top": false
+      },
+      {
+       "price": 2231,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        }
+       ],
+       "primary": "UA",
+       "mixed": false,
+       "stops": 1,
+       "durationMin": 1386,
+       "path": [
+        "PDX",
+        "EWR",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-18 23:24",
+       "arrive": "2026-12-20 07:30",
+       "layovers": [
+        {
+         "id": "EWR",
+         "min": 603
+        }
+       ],
+       "flightNumbers": [
+        "UA 1802",
+        "UA 19"
+       ],
+       "top": true
+      },
+      {
+       "price": 2239,
        "airlines": [
         {
          "code": "AA",
@@ -11375,7 +11678,7 @@
        "primary": "BA",
        "mixed": true,
        "stops": 2,
-       "durationMin": 1154,
+       "durationMin": 1669,
        "path": [
         "PDX",
         "ORD",
@@ -11383,27 +11686,59 @@
         "LIN"
        ],
        "dest": "LIN",
-       "depart": "2026-12-18 13:46",
-       "arrive": "2026-12-19 18:00",
+       "depart": "2026-12-18 23:31",
+       "arrive": "2026-12-20 12:20",
        "layovers": [
         {
          "id": "ORD",
-         "min": 110
+         "min": 705
         },
         {
          "id": "LHR",
-         "min": 195
+         "min": 140
         }
        ],
        "flightNumbers": [
-        "AA 563",
-        "BA 296",
-        "BA 574"
+        "AA 3329",
+        "BA 294",
+        "BA 568"
        ],
-       "top": true
+       "top": false
       },
       {
        "price": 2245,
+       "airlines": [
+        {
+         "code": "BA",
+         "name": "British Airways"
+        }
+       ],
+       "primary": "BA",
+       "mixed": false,
+       "stops": 1,
+       "durationMin": 1955,
+       "path": [
+        "PDX",
+        "LHR",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-18 17:45",
+       "arrive": "2026-12-20 11:20",
+       "layovers": [
+        {
+         "id": "LHR",
+         "min": 1255
+        }
+       ],
+       "flightNumbers": [
+        "BA 266",
+        "BA 580"
+       ],
+       "top": false
+      },
+      {
+       "price": 2251,
        "airlines": [
         {
          "code": "BA",
@@ -11435,81 +11770,87 @@
        "top": true
       },
       {
-       "price": 2317,
+       "price": 2311,
        "airlines": [
         {
-         "code": "AC",
-         "name": "Air Canada"
+         "code": "UA",
+         "name": "United"
+        }
+       ],
+       "primary": "UA",
+       "mixed": false,
+       "stops": 2,
+       "durationMin": 1368,
+       "path": [
+        "PDX",
+        "IAD",
+        "EWR",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-18 23:42",
+       "arrive": "2026-12-20 07:30",
+       "layovers": [
+        {
+         "id": "IAD",
+         "min": 305
+        },
+        {
+         "id": "EWR",
+         "min": 195
+        }
+       ],
+       "flightNumbers": [
+        "UA 793",
+        "UA 3603",
+        "UA 19"
+       ],
+       "top": false
+      },
+      {
+       "price": 2331,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
         },
         {
          "code": "LH",
          "name": "Lufthansa"
         }
        ],
-       "primary": "LH",
+       "primary": "UA",
        "mixed": true,
        "stops": 2,
-       "durationMin": 940,
+       "durationMin": 1118,
        "path": [
         "PDX",
-        "YVR",
+        "ORD",
         "FRA",
         "MXP"
        ],
        "dest": "MXP",
-       "depart": "2026-12-18 10:00",
+       "depart": "2026-12-18 07:02",
        "arrive": "2026-12-19 10:40",
        "layovers": [
         {
-         "id": "YVR",
-         "min": 126
+         "id": "ORD",
+         "min": 129
         },
         {
          "id": "FRA",
-         "min": 75
+         "min": 170
         }
        ],
        "flightNumbers": [
-        "AC 8651",
-        "LH 493",
+        "UA 2306",
+        "UA 944",
         "LH 248"
        ],
-       "top": false
+       "top": true
       },
       {
-       "price": 2390,
-       "airlines": [
-        {
-         "code": "KL",
-         "name": "KLM"
-        }
-       ],
-       "primary": "KL",
-       "mixed": false,
-       "stops": 1,
-       "durationMin": 1215,
-       "path": [
-        "PDX",
-        "AMS",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-18 13:20",
-       "arrive": "2026-12-19 18:35",
-       "layovers": [
-        {
-         "id": "AMS",
-         "min": 545
-        }
-       ],
-       "flightNumbers": [
-        "KL 616",
-        "KL 1617"
-       ],
-       "top": false
-      },
-      {
-       "price": 2442,
+       "price": 2337,
        "airlines": [
         {
          "code": "AA",
@@ -11523,77 +11864,35 @@
        "primary": "AA",
        "mixed": true,
        "stops": 2,
-       "durationMin": 1276,
+       "durationMin": 1175,
        "path": [
         "PDX",
-        "DFW",
+        "PHL",
         "LHR",
         "MXP"
        ],
        "dest": "MXP",
-       "depart": "2026-12-18 06:19",
+       "depart": "2026-12-18 08:00",
        "arrive": "2026-12-19 12:35",
        "layovers": [
         {
-         "id": "DFW",
-         "min": 219
+         "id": "PHL",
+         "min": 206
         },
         {
          "id": "LHR",
-         "min": 160
-        }
-       ],
-       "flightNumbers": [
-        "AA 1384",
-        "AA 50",
-        "BA 580"
-       ],
-       "top": false
-      },
-      {
-       "price": 2610,
-       "airlines": [
-        {
-         "code": "AA",
-         "name": "American"
-        },
-        {
-         "code": "EI",
-         "name": "Aer Lingus"
-        }
-       ],
-       "primary": "EI",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1085,
-       "path": [
-        "PDX",
-        "PHL",
-        "DUB",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-18 08:00",
-       "arrive": "2026-12-19 11:05",
-       "layovers": [
-        {
-         "id": "PHL",
-         "min": 91
-        },
-        {
-         "id": "DUB",
-         "min": 130
+         "min": 100
         }
        ],
        "flightNumbers": [
         "AA 424",
-        "EI 114",
-        "EI 432"
+        "AA 728",
+        "BA 580"
        ],
-       "top": false
+       "top": true
       },
       {
-       "price": 2613,
+       "price": 2364,
        "airlines": [
         {
          "code": "BA",
@@ -11625,7 +11924,137 @@
        "top": false
       },
       {
-       "price": 2729,
+       "price": 2762,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        },
+        {
+         "code": "LH",
+         "name": "Lufthansa"
+        },
+        {
+         "code": "EN",
+         "name": "Air Dolomiti"
+        }
+       ],
+       "primary": "LH",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1015,
+       "path": [
+        "PDX",
+        "SEA",
+        "MUC",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-18 10:30",
+       "arrive": "2026-12-19 12:25",
+       "layovers": [
+        {
+         "id": "SEA",
+         "min": 190
+        },
+        {
+         "id": "MUC",
+         "min": 80
+        }
+       ],
+       "flightNumbers": [
+        "AS 3217",
+        "LH 489",
+        "EN 1854"
+       ],
+       "top": false
+      },
+      {
+       "price": 2765,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "AZ",
+         "name": "ITA"
+        }
+       ],
+       "primary": "UA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 930,
+       "path": [
+        "PDX",
+        "ORD",
+        "BRU",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-18 10:45",
+       "arrive": "2026-12-19 11:15",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 59
+        },
+        {
+         "id": "BRU",
+         "min": 50
+        }
+       ],
+       "flightNumbers": [
+        "UA 1923",
+        "UA 972",
+        "AZ 151"
+       ],
+       "top": false
+      },
+      {
+       "price": 2795,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "LH",
+         "name": "Lufthansa"
+        }
+       ],
+       "primary": "UA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1015,
+       "path": [
+        "PDX",
+        "ORD",
+        "FRA",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-18 10:45",
+       "arrive": "2026-12-19 12:40",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 74
+        },
+        {
+         "id": "FRA",
+         "min": 110
+        }
+       ],
+       "flightNumbers": [
+        "UA 1923",
+        "UA 907",
+        "LH 272"
+       ],
+       "top": false
+      },
+      {
+       "price": 4136,
        "airlines": [
         {
          "code": "KL",
@@ -11654,10 +12083,10 @@
         "KL 616",
         "KL 1597"
        ],
-       "top": true
+       "top": false
       },
       {
-       "price": 14884,
+       "price": 17423,
        "airlines": [
         {
          "code": "KL",
@@ -11694,17 +12123,13 @@
       }
      ],
      "google": {
-      "lowest": 2163,
+      "lowest": 2185,
       "level": "high",
       "typical": [
        730,
        2100
       ],
       "history": [
-       [
-        1789628400,
-        1872
-       ],
        [
         1789714800,
         1819
@@ -11939,11 +12364,15 @@
        ],
        [
         1794729600,
-        2074
+        2088
        ],
        [
         1794816000,
-        2163
+        1914
+       ],
+       [
+        1794902400,
+        2185
        ]
       ]
      },
@@ -11952,330 +12381,10 @@
     "2026-12-12_2027-01-03": {
      "outbound": "2026-12-12",
      "return": "2027-01-03",
-     "fetchedAt": "2026-11-16T15:08:32.053Z",
+     "fetchedAt": "2026-11-17T22:28:30.992Z",
      "options": [
       {
-       "price": 1917,
-       "airlines": [
-        {
-         "code": "AA",
-         "name": "American"
-        }
-       ],
-       "primary": "AA",
-       "mixed": false,
-       "stops": 2,
-       "durationMin": 1432,
-       "path": [
-        "PDX",
-        "ORD",
-        "JFK",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 23:13",
-       "arrive": "2026-12-14 08:05",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 97
-        },
-        {
-         "id": "JFK",
-         "min": 476
-        }
-       ],
-       "flightNumbers": [
-        "AA 3329",
-        "AA 1796",
-        "AA 198"
-       ],
-       "top": false
-      },
-      {
-       "price": 1917,
-       "airlines": [
-        {
-         "code": "AA",
-         "name": "American"
-        }
-       ],
-       "primary": "AA",
-       "mixed": false,
-       "stops": 2,
-       "durationMin": 1432,
-       "path": [
-        "PDX",
-        "ORD",
-        "LGA",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 23:13",
-       "arrive": "2026-12-14 08:05",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 112
-        },
-        {
-         "id": "LGA",
-         "min": 470
-        }
-       ],
-       "flightNumbers": [
-        "AA 3329",
-        "AA 2723",
-        "AA 198"
-       ],
-       "top": false
-      },
-      {
-       "price": 1917,
-       "airlines": [
-        {
-         "code": "AA",
-         "name": "American"
-        }
-       ],
-       "primary": "AA",
-       "mixed": false,
-       "stops": 2,
-       "durationMin": 1432,
-       "path": [
-        "PDX",
-        "ORD",
-        "LGA",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 23:13",
-       "arrive": "2026-12-14 08:05",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 53
-        },
-        {
-         "id": "LGA",
-         "min": 529
-        }
-       ],
-       "flightNumbers": [
-        "AA 3329",
-        "AA 3019",
-        "AA 198"
-       ],
-       "top": false
-      },
-      {
-       "price": 1938,
-       "airlines": [
-        {
-         "code": "AC",
-         "name": "Air Canada"
-        }
-       ],
-       "primary": "AC",
-       "mixed": false,
-       "stops": 2,
-       "durationMin": 1085,
-       "path": [
-        "PDX",
-        "YVR",
-        "YUL",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 07:00",
-       "arrive": "2026-12-13 10:05",
-       "layovers": [
-        {
-         "id": "YVR",
-         "min": 206
-        },
-        {
-         "id": "YUL",
-         "min": 45
-        }
-       ],
-       "flightNumbers": [
-        "AC 8649",
-        "AC 306",
-        "AC 894"
-       ],
-       "top": true
-      },
-      {
-       "price": 1943,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "AC",
-         "name": "Air Canada"
-        }
-       ],
-       "primary": "AC",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1085,
-       "path": [
-        "PDX",
-        "ORD",
-        "YUL",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 07:00",
-       "arrive": "2026-12-13 10:05",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 158
-        },
-        {
-         "id": "YUL",
-         "min": 73
-        }
-       ],
-       "flightNumbers": [
-        "UA 2306",
-        "AC 8484",
-        "AC 894"
-       ],
-       "top": false
-      },
-      {
-       "price": 1946,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "LX",
-         "name": "SWISS"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1060,
-       "path": [
-        "PDX",
-        "ORD",
-        "ZRH",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 07:00",
-       "arrive": "2026-12-13 09:40",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 183
-        },
-        {
-         "id": "ZRH",
-         "min": 50
-        }
-       ],
-       "flightNumbers": [
-        "UA 2306",
-        "UA 3",
-        "LX 1612"
-       ],
-       "top": true
-      },
-      {
-       "price": 1946,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "LH",
-         "name": "Lufthansa"
-        }
-       ],
-       "primary": "LH",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1024,
-       "path": [
-        "PDX",
-        "ORD",
-        "MUC",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 14:26",
-       "arrive": "2026-12-13 16:30",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 82
-        },
-        {
-         "id": "MUC",
-         "min": 125
-        }
-       ],
-       "flightNumbers": [
-        "UA 2822",
-        "LH 435",
-        "LH 1856"
-       ],
-       "top": false
-      },
-      {
-       "price": 1957,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "EN",
-         "name": "Air Dolomiti"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1210,
-       "path": [
-        "PDX",
-        "DEN",
-        "FRA",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 08:50",
-       "arrive": "2026-12-13 14:00",
-       "layovers": [
-        {
-         "id": "DEN",
-         "min": 215
-        },
-        {
-         "id": "FRA",
-         "min": 205
-        }
-       ],
-       "flightNumbers": [
-        "UA 2375",
-        "UA 182",
-        "EN 250"
-       ],
-       "top": true
-      },
-      {
-       "price": 2021,
+       "price": 2024,
        "airlines": [
         {
          "code": "AA",
@@ -12289,16 +12398,16 @@
        "primary": "BA",
        "mixed": true,
        "stops": 2,
-       "durationMin": 1116,
+       "durationMin": 1176,
        "path": [
         "PDX",
         "PHL",
         "LHR",
-        "MXP"
+        "LIN"
        ],
-       "dest": "MXP",
+       "dest": "LIN",
        "depart": "2026-12-12 07:44",
-       "arrive": "2026-12-13 11:20",
+       "arrive": "2026-12-13 12:20",
        "layovers": [
         {
          "id": "PHL",
@@ -12306,274 +12415,18 @@
         },
         {
          "id": "LHR",
-         "min": 100
+         "min": 160
         }
        ],
        "flightNumbers": [
         "AA 424",
         "BA 66",
-        "BA 580"
+        "BA 568"
        ],
        "top": true
       },
       {
-       "price": 2026,
-       "airlines": [
-        {
-         "code": "DL",
-         "name": "Delta"
-        },
-        {
-         "code": "AF",
-         "name": "Air France"
-        }
-       ],
-       "primary": "DL",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 2121,
-       "path": [
-        "PDX",
-        "SLC",
-        "CDG",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-12 17:34",
-       "arrive": "2026-12-14 13:55",
-       "layovers": [
-        {
-         "id": "SLC",
-         "min": 1169
-        },
-        {
-         "id": "CDG",
-         "min": 145
-        }
-       ],
-       "flightNumbers": [
-        "DL 1244",
-        "DL 300",
-        "AF 1012"
-       ],
-       "top": false
-      },
-      {
-       "price": 2050,
-       "airlines": [
-        {
-         "code": "AC",
-         "name": "Air Canada"
-        },
-        {
-         "code": "LH",
-         "name": "Lufthansa"
-        }
-       ],
-       "primary": "LH",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 940,
-       "path": [
-        "PDX",
-        "YVR",
-        "FRA",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 10:00",
-       "arrive": "2026-12-13 10:40",
-       "layovers": [
-        {
-         "id": "YVR",
-         "min": 126
-        },
-        {
-         "id": "FRA",
-         "min": 75
-        }
-       ],
-       "flightNumbers": [
-        "AC 8651",
-        "LH 493",
-        "LH 248"
-       ],
-       "top": false
-      },
-      {
-       "price": 2050,
-       "airlines": [
-        {
-         "code": "AC",
-         "name": "Air Canada"
-        },
-        {
-         "code": "LH",
-         "name": "Lufthansa"
-        },
-        {
-         "code": "EN",
-         "name": "Air Dolomiti"
-        }
-       ],
-       "primary": "LH",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1140,
-       "path": [
-        "PDX",
-        "YVR",
-        "FRA",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 10:00",
-       "arrive": "2026-12-13 14:00",
-       "layovers": [
-        {
-         "id": "YVR",
-         "min": 126
-        },
-        {
-         "id": "FRA",
-         "min": 275
-        }
-       ],
-       "flightNumbers": [
-        "AC 8651",
-        "LH 493",
-        "EN 250"
-       ],
-       "top": false
-      },
-      {
-       "price": 2054,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "LH",
-         "name": "Lufthansa"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1120,
-       "path": [
-        "PDX",
-        "ORD",
-        "FRA",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 07:00",
-       "arrive": "2026-12-13 10:40",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 128
-        },
-        {
-         "id": "FRA",
-         "min": 170
-        }
-       ],
-       "flightNumbers": [
-        "UA 2306",
-        "UA 944",
-        "LH 248"
-       ],
-       "top": false
-      },
-      {
-       "price": 2054,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "EN",
-         "name": "Air Dolomiti"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1091,
-       "path": [
-        "PDX",
-        "ORD",
-        "FRA",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 10:49",
-       "arrive": "2026-12-13 14:00",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 73
-        },
-        {
-         "id": "FRA",
-         "min": 190
-        }
-       ],
-       "flightNumbers": [
-        "UA 1923",
-        "UA 907",
-        "EN 250"
-       ],
-       "top": false
-      },
-      {
-       "price": 2054,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "EN",
-         "name": "Air Dolomiti"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1031,
-       "path": [
-        "PDX",
-        "SFO",
-        "FRA",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 15:44",
-       "arrive": "2026-12-13 17:55",
-       "layovers": [
-        {
-         "id": "SFO",
-         "min": 68
-        },
-        {
-         "id": "FRA",
-         "min": 105
-        }
-       ],
-       "flightNumbers": [
-        "UA 1292",
-        "UA 926",
-        "EN 252"
-       ],
-       "top": false
-      },
-      {
-       "price": 2056,
+       "price": 2126,
        "airlines": [
         {
          "code": "AS",
@@ -12587,7 +12440,7 @@
        "primary": "BA",
        "mixed": true,
        "stops": 2,
-       "durationMin": 1075,
+       "durationMin": 1155,
        "path": [
         "PDX",
         "SEA",
@@ -12596,7 +12449,7 @@
        ],
        "dest": "LIN",
        "depart": "2026-12-12 10:30",
-       "arrive": "2026-12-13 13:25",
+       "arrive": "2026-12-13 14:45",
        "layovers": [
         {
          "id": "SEA",
@@ -12604,139 +12457,13 @@
         },
         {
          "id": "LHR",
-         "min": 190
+         "min": 270
         }
        ],
        "flightNumbers": [
         "AS 3217",
         "BA 52",
-        "BA 570"
-       ],
-       "top": true
-      },
-      {
-       "price": 2056,
-       "airlines": [
-        {
-         "code": "DL",
-         "name": "Delta"
-        },
-        {
-         "code": "KL",
-         "name": "KLM"
-        }
-       ],
-       "primary": "DL",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1142,
-       "path": [
-        "PDX",
-        "MSP",
-        "AMS",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-12 11:53",
-       "arrive": "2026-12-13 15:55",
-       "layovers": [
-        {
-         "id": "MSP",
-         "min": 119
-        },
-        {
-         "id": "AMS",
-         "min": 220
-        }
-       ],
-       "flightNumbers": [
-        "DL 2415",
-        "DL 162",
-        "KL 1615"
-       ],
-       "top": false
-      },
-      {
-       "price": 2071,
-       "airlines": [
-        {
-         "code": "AS",
-         "name": "Alaska"
-        },
-        {
-         "code": "BA",
-         "name": "British Airways"
-        }
-       ],
-       "primary": "BA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1198,
-       "path": [
-        "PDX",
-        "SEA",
-        "LHR",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 13:57",
-       "arrive": "2026-12-13 18:55",
-       "layovers": [
-        {
-         "id": "SEA",
-         "min": 229
-        },
-        {
-         "id": "LHR",
-         "min": 220
-        }
-       ],
-       "flightNumbers": [
-        "AS 2284",
-        "BA 48",
-        "BA 588"
-       ],
-       "top": false
-      },
-      {
-       "price": 2144,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "LX",
-         "name": "SWISS"
-        }
-       ],
-       "primary": "LX",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1106,
-       "path": [
-        "PDX",
-        "ORD",
-        "ZRH",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-12 10:49",
-       "arrive": "2026-12-13 14:15",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 113
-        },
-        {
-         "id": "ZRH",
-         "min": 160
-        }
-       ],
-       "flightNumbers": [
-        "UA 1923",
-        "LX 9",
-        "LX 1628"
+        "BA 572"
        ],
        "top": false
       },
@@ -12780,21 +12507,479 @@
         "UA 953",
         "EN 1854"
        ],
+       "top": true
+      },
+      {
+       "price": 2147,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        },
+        {
+         "code": "BA",
+         "name": "British Airways"
+        }
+       ],
+       "primary": "BA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1072,
+       "path": [
+        "PDX",
+        "SEA",
+        "LHR",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-12 16:03",
+       "arrive": "2026-12-13 18:55",
+       "layovers": [
+        {
+         "id": "SEA",
+         "min": 103
+        },
+        {
+         "id": "LHR",
+         "min": 220
+        }
+       ],
+       "flightNumbers": [
+        "AS 2021",
+        "BA 48",
+        "BA 588"
+       ],
+       "top": false
+      },
+      {
+       "price": 2155,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "LH",
+         "name": "Lufthansa"
+        }
+       ],
+       "primary": "LH",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1120,
+       "path": [
+        "PDX",
+        "ORD",
+        "FRA",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-12 07:00",
+       "arrive": "2026-12-13 10:40",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 193
+        },
+        {
+         "id": "FRA",
+         "min": 115
+        }
+       ],
+       "flightNumbers": [
+        "UA 2306",
+        "LH 431",
+        "LH 248"
+       ],
+       "top": false
+      },
+      {
+       "price": 2199,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        },
+        {
+         "code": "BA",
+         "name": "British Airways"
+        }
+       ],
+       "primary": "BA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1075,
+       "path": [
+        "PDX",
+        "SEA",
+        "LHR",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-12 10:30",
+       "arrive": "2026-12-13 13:25",
+       "layovers": [
+        {
+         "id": "SEA",
+         "min": 120
+        },
+        {
+         "id": "LHR",
+         "min": 190
+        }
+       ],
+       "flightNumbers": [
+        "AS 3217",
+        "BA 52",
+        "BA 570"
+       ],
+       "top": false
+      },
+      {
+       "price": 2210,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        },
+        {
+         "code": "BA",
+         "name": "British Airways"
+        }
+       ],
+       "primary": "BA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1010,
+       "path": [
+        "PDX",
+        "SEA",
+        "LHR",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-12 10:30",
+       "arrive": "2026-12-13 12:20",
+       "layovers": [
+        {
+         "id": "SEA",
+         "min": 120
+        },
+        {
+         "id": "LHR",
+         "min": 125
+        }
+       ],
+       "flightNumbers": [
+        "AS 3217",
+        "BA 52",
+        "BA 568"
+       ],
+       "top": true
+      },
+      {
+       "price": 2247,
+       "airlines": [
+        {
+         "code": "AA",
+         "name": "American"
+        },
+        {
+         "code": "BA",
+         "name": "British Airways"
+        }
+       ],
+       "primary": "BA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1116,
+       "path": [
+        "PDX",
+        "PHL",
+        "LHR",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-12 07:44",
+       "arrive": "2026-12-13 11:20",
+       "layovers": [
+        {
+         "id": "PHL",
+         "min": 161
+        },
+        {
+         "id": "LHR",
+         "min": 100
+        }
+       ],
+       "flightNumbers": [
+        "AA 424",
+        "BA 66",
+        "BA 580"
+       ],
+       "top": false
+      },
+      {
+       "price": 2290,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "LH",
+         "name": "Lufthansa"
+        }
+       ],
+       "primary": "LH",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1024,
+       "path": [
+        "PDX",
+        "ORD",
+        "MUC",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-12 14:26",
+       "arrive": "2026-12-13 16:30",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 82
+        },
+        {
+         "id": "MUC",
+         "min": 125
+        }
+       ],
+       "flightNumbers": [
+        "UA 2822",
+        "LH 435",
+        "LH 1856"
+       ],
+       "top": false
+      },
+      {
+       "price": 2305,
+       "airlines": [
+        {
+         "code": "AC",
+         "name": "Air Canada"
+        },
+        {
+         "code": "LH",
+         "name": "Lufthansa"
+        }
+       ],
+       "primary": "LH",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1060,
+       "path": [
+        "PDX",
+        "YVR",
+        "FRA",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-12 10:00",
+       "arrive": "2026-12-13 12:40",
+       "layovers": [
+        {
+         "id": "YVR",
+         "min": 126
+        },
+        {
+         "id": "FRA",
+         "min": 195
+        }
+       ],
+       "flightNumbers": [
+        "AC 8651",
+        "LH 493",
+        "LH 272"
+       ],
+       "top": false
+      },
+      {
+       "price": 2343,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        },
+        {
+         "code": "KL",
+         "name": "KLM"
+        }
+       ],
+       "primary": "DL",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 928,
+       "path": [
+        "PDX",
+        "SEA",
+        "AMS",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-12 11:32",
+       "arrive": "2026-12-13 12:00",
+       "layovers": [
+        {
+         "id": "SEA",
+         "min": 110
+        },
+        {
+         "id": "AMS",
+         "min": 50
+        }
+       ],
+       "flightNumbers": [
+        "DL 3818",
+        "DL 142",
+        "KL 1597"
+       ],
+       "top": false
+      },
+      {
+       "price": 2381,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "LX",
+         "name": "SWISS"
+        }
+       ],
+       "primary": "UA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1060,
+       "path": [
+        "PDX",
+        "ORD",
+        "ZRH",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-12 07:00",
+       "arrive": "2026-12-13 09:40",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 183
+        },
+        {
+         "id": "ZRH",
+         "min": 50
+        }
+       ],
+       "flightNumbers": [
+        "UA 2306",
+        "UA 3",
+        "LX 1612"
+       ],
+       "top": false
+      },
+      {
+       "price": 2437,
+       "airlines": [
+        {
+         "code": "AA",
+         "name": "American"
+        },
+        {
+         "code": "EI",
+         "name": "Aer Lingus"
+        }
+       ],
+       "primary": "EI",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1101,
+       "path": [
+        "PDX",
+        "PHL",
+        "DUB",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-12 07:44",
+       "arrive": "2026-12-13 11:05",
+       "layovers": [
+        {
+         "id": "PHL",
+         "min": 106
+        },
+        {
+         "id": "DUB",
+         "min": 130
+        }
+       ],
+       "flightNumbers": [
+        "AA 424",
+        "EI 114",
+        "EI 432"
+       ],
+       "top": false
+      },
+      {
+       "price": 2486,
+       "airlines": [
+        {
+         "code": "AC",
+         "name": "Air Canada"
+        },
+        {
+         "code": "LH",
+         "name": "Lufthansa"
+        }
+       ],
+       "primary": "LH",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 940,
+       "path": [
+        "PDX",
+        "YVR",
+        "FRA",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-12 10:00",
+       "arrive": "2026-12-13 10:40",
+       "layovers": [
+        {
+         "id": "YVR",
+         "min": 126
+        },
+        {
+         "id": "FRA",
+         "min": 75
+        }
+       ],
+       "flightNumbers": [
+        "AC 8651",
+        "LH 493",
+        "LH 248"
+       ],
        "top": false
       }
      ],
      "google": {
-      "lowest": 1917,
+      "lowest": 2024,
       "level": "high",
       "typical": [
        720,
        1800
       ],
       "history": [
-       [
-        1789628400,
-        1119
-       ],
        [
         1789714800,
         1122
@@ -13029,11 +13214,15 @@
        ],
        [
         1794729600,
-        1917
+        1886
        ],
        [
         1794816000,
-        1917
+        1915
+       ],
+       [
+        1794902400,
+        2024
        ]
       ]
      },
@@ -15522,52 +15711,10 @@
     "2026-12-16_2027-01-03": {
      "outbound": "2026-12-16",
      "return": "2027-01-03",
-     "fetchedAt": "2026-11-16T15:09:18.700Z",
+     "fetchedAt": "2026-11-17T22:29:22.352Z",
      "options": [
       {
-       "price": 2093,
-       "airlines": [
-        {
-         "code": "AA",
-         "name": "American"
-        },
-        {
-         "code": "BA",
-         "name": "British Airways"
-        }
-       ],
-       "primary": "BA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1160,
-       "path": [
-        "PDX",
-        "ORD",
-        "LHR",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-16 13:30",
-       "arrive": "2026-12-17 17:50",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 126
-        },
-        {
-         "id": "LHR",
-         "min": 185
-        }
-       ],
-       "flightNumbers": [
-        "AA 562",
-        "BA 296",
-        "BA 574"
-       ],
-       "top": false
-      },
-      {
-       "price": 2139,
+       "price": 2266,
        "airlines": [
         {
          "code": "BA",
@@ -15596,10 +15743,10 @@
         "BA 266",
         "BA 588"
        ],
-       "top": false
+       "top": true
       },
       {
-       "price": 2168,
+       "price": 2268,
        "airlines": [
         {
          "code": "BA",
@@ -15609,7 +15756,7 @@
        "primary": "BA",
        "mixed": false,
        "stops": 1,
-       "durationMin": 1015,
+       "durationMin": 775,
        "path": [
         "PDX",
         "LHR",
@@ -15617,21 +15764,259 @@
        ],
        "dest": "LIN",
        "depart": "2026-12-16 17:45",
-       "arrive": "2026-12-17 19:40",
+       "arrive": "2026-12-17 15:40",
        "layovers": [
         {
          "id": "LHR",
-         "min": 325
+         "min": 75
         }
        ],
        "flightNumbers": [
         "BA 266",
-        "BA 7305"
+        "BA 572"
        ],
        "top": true
       },
       {
-       "price": 2207,
+       "price": 2338,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        }
+       ],
+       "primary": "UA",
+       "mixed": false,
+       "stops": 2,
+       "durationMin": 1020,
+       "path": [
+        "PDX",
+        "SFO",
+        "EWR",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-16 05:30",
+       "arrive": "2026-12-17 07:30",
+       "layovers": [
+        {
+         "id": "SFO",
+         "min": 47
+        },
+        {
+         "id": "EWR",
+         "min": 60
+        }
+       ],
+       "flightNumbers": [
+        "UA 5611",
+        "UA 1642",
+        "UA 19"
+       ],
+       "top": false
+      },
+      {
+       "price": 2415,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        },
+        {
+         "code": "IB",
+         "name": "Iberia"
+        }
+       ],
+       "primary": "IB",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1300,
+       "path": [
+        "PDX",
+        "ORD",
+        "MAD",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-16 07:00",
+       "arrive": "2026-12-17 13:40",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 270
+        },
+        {
+         "id": "MAD",
+         "min": 155
+        }
+       ],
+       "flightNumbers": [
+        "AS 324",
+        "IB 342",
+        "IB 673"
+       ],
+       "top": false
+      },
+      {
+       "price": 2471,
+       "airlines": [
+        {
+         "code": "AA",
+         "name": "American"
+        },
+        {
+         "code": "BA",
+         "name": "British Airways"
+        }
+       ],
+       "primary": "BA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1116,
+       "path": [
+        "PDX",
+        "PHL",
+        "LHR",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-16 07:44",
+       "arrive": "2026-12-17 11:20",
+       "layovers": [
+        {
+         "id": "PHL",
+         "min": 161
+        },
+        {
+         "id": "LHR",
+         "min": 100
+        }
+       ],
+       "flightNumbers": [
+        "AA 424",
+        "BA 66",
+        "BA 582"
+       ],
+       "top": false
+      },
+      {
+       "price": 2520,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "EN",
+         "name": "Air Dolomiti"
+        }
+       ],
+       "primary": "UA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1002,
+       "path": [
+        "PDX",
+        "ORD",
+        "MUC",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-16 10:43",
+       "arrive": "2026-12-17 12:25",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 71
+        },
+        {
+         "id": "MUC",
+         "min": 100
+        }
+       ],
+       "flightNumbers": [
+        "UA 1923",
+        "UA 953",
+        "EN 1854"
+       ],
+       "top": false
+      },
+      {
+       "price": 2544,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        }
+       ],
+       "primary": "DL",
+       "mixed": false,
+       "stops": 1,
+       "durationMin": 1135,
+       "path": [
+        "PDX",
+        "ATL",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-16 06:50",
+       "arrive": "2026-12-17 10:45",
+       "layovers": [
+        {
+         "id": "ATL",
+         "min": 328
+        }
+       ],
+       "flightNumbers": [
+        "DL 662",
+        "DL 174"
+       ],
+       "top": false
+      },
+      {
+       "price": 2548,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        },
+        {
+         "code": "KL",
+         "name": "KLM"
+        }
+       ],
+       "primary": "DL",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 928,
+       "path": [
+        "PDX",
+        "SEA",
+        "AMS",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-16 11:32",
+       "arrive": "2026-12-17 12:00",
+       "layovers": [
+        {
+         "id": "SEA",
+         "min": 110
+        },
+        {
+         "id": "AMS",
+         "min": 50
+        }
+       ],
+       "flightNumbers": [
+        "DL 3818",
+        "DL 142",
+        "KL 1597"
+       ],
+       "top": false
+      },
+      {
+       "price": 2553,
        "airlines": [
         {
          "code": "UA",
@@ -15669,211 +16054,49 @@
        "top": false
       },
       {
-       "price": 2242,
+       "price": 2680,
        "airlines": [
         {
-         "code": "AA",
-         "name": "American"
-        },
-        {
-         "code": "BA",
-         "name": "British Airways"
-        }
-       ],
-       "primary": "BA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1070,
-       "path": [
-        "PDX",
-        "ORD",
-        "LHR",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-16 13:30",
-       "arrive": "2026-12-17 16:20",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 126
-        },
-        {
-         "id": "LHR",
-         "min": 100
-        }
-       ],
-       "flightNumbers": [
-        "AA 562",
-        "BA 296",
-        "BA 584"
-       ],
-       "top": false
-      },
-      {
-       "price": 2269,
-       "airlines": [
-        {
-         "code": "BA",
-         "name": "British Airways"
-        }
-       ],
-       "primary": "BA",
-       "mixed": false,
-       "stops": 1,
-       "durationMin": 775,
-       "path": [
-        "PDX",
-        "LHR",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-16 17:45",
-       "arrive": "2026-12-17 15:40",
-       "layovers": [
-        {
-         "id": "LHR",
-         "min": 75
-        }
-       ],
-       "flightNumbers": [
-        "BA 266",
-        "BA 572"
-       ],
-       "top": true
-      },
-      {
-       "price": 2287,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "LX",
-         "name": "SWISS"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1060,
-       "path": [
-        "PDX",
-        "ORD",
-        "ZRH",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-16 07:00",
-       "arrive": "2026-12-17 09:40",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 183
-        },
-        {
-         "id": "ZRH",
-         "min": 50
-        }
-       ],
-       "flightNumbers": [
-        "UA 2306",
-        "UA 3",
-        "LX 1612"
-       ],
-       "top": false
-      },
-      {
-       "price": 2299,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "EN",
-         "name": "Air Dolomiti"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1097,
-       "path": [
-        "PDX",
-        "ORD",
-        "FRA",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-16 10:43",
-       "arrive": "2026-12-17 14:00",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 81
-        },
-        {
-         "id": "FRA",
-         "min": 190
-        }
-       ],
-       "flightNumbers": [
-        "UA 1923",
-        "UA 907",
-        "EN 250"
-       ],
-       "top": false
-      },
-      {
-       "price": 2299,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
+         "code": "AC",
+         "name": "Air Canada"
         },
         {
          "code": "LH",
          "name": "Lufthansa"
-        },
-        {
-         "code": "EN",
-         "name": "Air Dolomiti"
         }
        ],
        "primary": "LH",
        "mixed": true,
        "stops": 2,
-       "durationMin": 945,
+       "durationMin": 940,
        "path": [
         "PDX",
-        "DEN",
+        "YVR",
         "FRA",
         "MXP"
        ],
        "dest": "MXP",
-       "depart": "2026-12-16 13:15",
-       "arrive": "2026-12-17 14:00",
+       "depart": "2026-12-16 10:00",
+       "arrive": "2026-12-17 10:40",
        "layovers": [
         {
-         "id": "DEN",
-         "min": 40
+         "id": "YVR",
+         "min": 126
         },
         {
          "id": "FRA",
-         "min": 110
+         "min": 75
         }
        ],
        "flightNumbers": [
-        "UA 2064",
-        "LH 447",
-        "EN 250"
+        "AC 8651",
+        "LH 493",
+        "LH 248"
        ],
        "top": false
       },
       {
-       "price": 2472,
+       "price": 2712,
        "airlines": [
         {
          "code": "KL",
@@ -15903,108 +16126,16 @@
         "KL 1597"
        ],
        "top": true
-      },
-      {
-       "price": 2498,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "SN",
-         "name": "Brussels Airlines"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 997,
-       "path": [
-        "PDX",
-        "ORD",
-        "BRU",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-16 10:43",
-       "arrive": "2026-12-17 12:20",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 61
-        },
-        {
-         "id": "BRU",
-         "min": 120
-        }
-       ],
-       "flightNumbers": [
-        "UA 1923",
-        "UA 972",
-        "SN 3147"
-       ],
-       "top": false
-      },
-      {
-       "price": 2534,
-       "airlines": [
-        {
-         "code": "DL",
-         "name": "Delta"
-        },
-        {
-         "code": "AF",
-         "name": "Air France"
-        }
-       ],
-       "primary": "DL",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1138,
-       "path": [
-        "PDX",
-        "SLC",
-        "CDG",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-16 09:57",
-       "arrive": "2026-12-17 13:55",
-       "layovers": [
-        {
-         "id": "SLC",
-         "min": 185
-        },
-        {
-         "id": "CDG",
-         "min": 145
-        }
-       ],
-       "flightNumbers": [
-        "DL 1203",
-        "DL 300",
-        "AF 1012"
-       ],
-       "top": false
       }
      ],
      "google": {
-      "lowest": 2093,
+      "lowest": 2266,
       "level": "high",
       "typical": [
        720,
        1800
       ],
       "history": [
-       [
-        1789542000,
-        1183
-       ],
-       [
-        1789628400,
-        1260
-       ],
        [
         1789714800,
         1259
@@ -16243,7 +16374,11 @@
        ],
        [
         1794816000,
-        2093
+        2051
+       ],
+       [
+        1794902400,
+        2266
        ]
       ]
      },
@@ -17725,52 +17860,10 @@
     "2026-12-15_2027-01-02": {
      "outbound": "2026-12-15",
      "return": "2027-01-02",
-     "fetchedAt": "2026-11-16T23:25:56.922Z",
+     "fetchedAt": "2026-11-17T22:29:05.424Z",
      "options": [
       {
-       "price": 2012,
-       "airlines": [
-        {
-         "code": "AS",
-         "name": "Alaska"
-        },
-        {
-         "code": "IB",
-         "name": "Iberia"
-        }
-       ],
-       "primary": "IB",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1235,
-       "path": [
-        "PDX",
-        "ORD",
-        "MAD",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-15 07:00",
-       "arrive": "2026-12-16 12:35",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 270
-        },
-        {
-         "id": "MAD",
-         "min": 90
-        }
-       ],
-       "flightNumbers": [
-        "AS 324",
-        "IB 342",
-        "IB 691"
-       ],
-       "top": true
-      },
-      {
-       "price": 2342,
+       "price": 2253,
        "airlines": [
         {
          "code": "AC",
@@ -17808,133 +17901,7 @@
        "top": true
       },
       {
-       "price": 2426,
-       "airlines": [
-        {
-         "code": "DL",
-         "name": "Delta"
-        },
-        {
-         "code": "AF",
-         "name": "Air France"
-        }
-       ],
-       "primary": "DL",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1145,
-       "path": [
-        "PDX",
-        "JFK",
-        "CDG",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-15 07:10",
-       "arrive": "2026-12-16 11:15",
-       "layovers": [
-        {
-         "id": "JFK",
-         "min": 211
-        },
-        {
-         "id": "CDG",
-         "min": 75
-        }
-       ],
-       "flightNumbers": [
-        "DL 451",
-        "DL 262",
-        "AF 1412"
-       ],
-       "top": false
-      },
-      {
-       "price": 2426,
-       "airlines": [
-        {
-         "code": "DL",
-         "name": "Delta"
-        },
-        {
-         "code": "AF",
-         "name": "Air France"
-        }
-       ],
-       "primary": "DL",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1138,
-       "path": [
-        "PDX",
-        "SLC",
-        "CDG",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-15 09:57",
-       "arrive": "2026-12-16 13:55",
-       "layovers": [
-        {
-         "id": "SLC",
-         "min": 185
-        },
-        {
-         "id": "CDG",
-         "min": 145
-        }
-       ],
-       "flightNumbers": [
-        "DL 1203",
-        "DL 300",
-        "AF 1012"
-       ],
-       "top": false
-      },
-      {
-       "price": 2430,
-       "airlines": [
-        {
-         "code": "DL",
-         "name": "Delta"
-        },
-        {
-         "code": "KL",
-         "name": "KLM"
-        }
-       ],
-       "primary": "DL",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 928,
-       "path": [
-        "PDX",
-        "SEA",
-        "AMS",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-15 11:32",
-       "arrive": "2026-12-16 12:00",
-       "layovers": [
-        {
-         "id": "SEA",
-         "min": 110
-        },
-        {
-         "id": "AMS",
-         "min": 55
-        }
-       ],
-       "flightNumbers": [
-        "DL 3818",
-        "DL 142",
-        "KL 1597"
-       ],
-       "top": true
-      },
-      {
-       "price": 2430,
+       "price": 2440,
        "airlines": [
         {
          "code": "UA",
@@ -17976,259 +17943,7 @@
        "top": false
       },
       {
-       "price": 2432,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "LX",
-         "name": "SWISS"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1060,
-       "path": [
-        "PDX",
-        "ORD",
-        "ZRH",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-15 07:00",
-       "arrive": "2026-12-16 09:40",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 183
-        },
-        {
-         "id": "ZRH",
-         "min": 50
-        }
-       ],
-       "flightNumbers": [
-        "UA 2306",
-        "UA 3",
-        "LX 1612"
-       ],
-       "top": true
-      },
-      {
-       "price": 2441,
-       "airlines": [
-        {
-         "code": "AC",
-         "name": "Air Canada"
-        },
-        {
-         "code": "LH",
-         "name": "Lufthansa"
-        }
-       ],
-       "primary": "LH",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1120,
-       "path": [
-        "PDX",
-        "YVR",
-        "FRA",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-15 07:00",
-       "arrive": "2026-12-16 10:40",
-       "layovers": [
-        {
-         "id": "YVR",
-         "min": 306
-        },
-        {
-         "id": "FRA",
-         "min": 75
-        }
-       ],
-       "flightNumbers": [
-        "AC 8649",
-        "LH 493",
-        "LH 248"
-       ],
-       "top": false
-      },
-      {
-       "price": 2445,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "LH",
-         "name": "Lufthansa"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1120,
-       "path": [
-        "PDX",
-        "ORD",
-        "FRA",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-15 07:00",
-       "arrive": "2026-12-16 10:40",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 128
-        },
-        {
-         "id": "FRA",
-         "min": 170
-        }
-       ],
-       "flightNumbers": [
-        "UA 2306",
-        "UA 944",
-        "LH 248"
-       ],
-       "top": false
-      },
-      {
-       "price": 2449,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "EN",
-         "name": "Air Dolomiti"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1085,
-       "path": [
-        "PDX",
-        "ORD",
-        "FRA",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-15 07:00",
-       "arrive": "2026-12-16 10:05",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 128
-        },
-        {
-         "id": "FRA",
-         "min": 135
-        }
-       ],
-       "flightNumbers": [
-        "UA 2306",
-        "UA 944",
-        "EN 270"
-       ],
-       "top": false
-      },
-      {
-       "price": 2467,
-       "airlines": [
-        {
-         "code": "DL",
-         "name": "Delta"
-        },
-        {
-         "code": "AF",
-         "name": "Air France"
-        }
-       ],
-       "primary": "AF",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1043,
-       "path": [
-        "PDX",
-        "SEA",
-        "CDG",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-15 11:32",
-       "arrive": "2026-12-16 13:55",
-       "layovers": [
-        {
-         "id": "SEA",
-         "min": 200
-        },
-        {
-         "id": "CDG",
-         "min": 95
-        }
-       ],
-       "flightNumbers": [
-        "DL 3818",
-        "AF 77",
-        "AF 1012"
-       ],
-       "top": false
-      },
-      {
-       "price": 2471,
-       "airlines": [
-        {
-         "code": "DL",
-         "name": "Delta"
-        },
-        {
-         "code": "KL",
-         "name": "KLM"
-        }
-       ],
-       "primary": "KL",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1070,
-       "path": [
-        "PDX",
-        "JFK",
-        "AMS",
-        "LIN"
-       ],
-       "dest": "LIN",
-       "depart": "2026-12-15 07:10",
-       "arrive": "2026-12-16 10:00",
-       "layovers": [
-        {
-         "id": "JFK",
-         "min": 91
-        },
-        {
-         "id": "AMS",
-         "min": 145
-        }
-       ],
-       "flightNumbers": [
-        "DL 451",
-        "KL 642",
-        "KL 1613"
-       ],
-       "top": false
-      },
-      {
-       "price": 2475,
+       "price": 2455,
        "airlines": [
         {
          "code": "AC",
@@ -18270,7 +17985,343 @@
        "top": false
       },
       {
-       "price": 2495,
+       "price": 2465,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        },
+        {
+         "code": "AF",
+         "name": "Air France"
+        }
+       ],
+       "primary": "DL",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1145,
+       "path": [
+        "PDX",
+        "JFK",
+        "CDG",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-15 07:10",
+       "arrive": "2026-12-16 11:15",
+       "layovers": [
+        {
+         "id": "JFK",
+         "min": 211
+        },
+        {
+         "id": "CDG",
+         "min": 75
+        }
+       ],
+       "flightNumbers": [
+        "DL 451",
+        "DL 262",
+        "AF 1412"
+       ],
+       "top": false
+      },
+      {
+       "price": 2465,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        },
+        {
+         "code": "AF",
+         "name": "Air France"
+        }
+       ],
+       "primary": "DL",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1138,
+       "path": [
+        "PDX",
+        "SLC",
+        "CDG",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-15 09:57",
+       "arrive": "2026-12-16 13:55",
+       "layovers": [
+        {
+         "id": "SLC",
+         "min": 185
+        },
+        {
+         "id": "CDG",
+         "min": 145
+        }
+       ],
+       "flightNumbers": [
+        "DL 1203",
+        "DL 300",
+        "AF 1012"
+       ],
+       "top": false
+      },
+      {
+       "price": 2469,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        },
+        {
+         "code": "KL",
+         "name": "KLM"
+        }
+       ],
+       "primary": "DL",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1023,
+       "path": [
+        "PDX",
+        "SLC",
+        "AMS",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-15 09:57",
+       "arrive": "2026-12-16 12:00",
+       "layovers": [
+        {
+         "id": "SLC",
+         "min": 140
+        },
+        {
+         "id": "AMS",
+         "min": 80
+        }
+       ],
+       "flightNumbers": [
+        "DL 1203",
+        "DL 56",
+        "KL 1597"
+       ],
+       "top": true
+      },
+      {
+       "price": 2469,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        },
+        {
+         "code": "KL",
+         "name": "KLM"
+        }
+       ],
+       "primary": "DL",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1140,
+       "path": [
+        "PDX",
+        "MSP",
+        "AMS",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-15 06:00",
+       "arrive": "2026-12-16 10:00",
+       "layovers": [
+        {
+         "id": "MSP",
+         "min": 255
+        },
+        {
+         "id": "AMS",
+         "min": 95
+        }
+       ],
+       "flightNumbers": [
+        "DL 2369",
+        "DL 160",
+        "KL 1613"
+       ],
+       "top": false
+      },
+      {
+       "price": 2469,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        },
+        {
+         "code": "KL",
+         "name": "KLM"
+        }
+       ],
+       "primary": "DL",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1136,
+       "path": [
+        "PDX",
+        "MSP",
+        "AMS",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-15 11:59",
+       "arrive": "2026-12-16 15:55",
+       "layovers": [
+        {
+         "id": "MSP",
+         "min": 113
+        },
+        {
+         "id": "AMS",
+         "min": 220
+        }
+       ],
+       "flightNumbers": [
+        "DL 1968",
+        "DL 162",
+        "KL 1615"
+       ],
+       "top": false
+      },
+      {
+       "price": 2506,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        },
+        {
+         "code": "AF",
+         "name": "Air France"
+        }
+       ],
+       "primary": "AF",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1043,
+       "path": [
+        "PDX",
+        "SEA",
+        "CDG",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-15 11:32",
+       "arrive": "2026-12-16 13:55",
+       "layovers": [
+        {
+         "id": "SEA",
+         "min": 200
+        },
+        {
+         "id": "CDG",
+         "min": 95
+        }
+       ],
+       "flightNumbers": [
+        "DL 3818",
+        "AF 77",
+        "AF 1012"
+       ],
+       "top": false
+      },
+      {
+       "price": 2510,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        },
+        {
+         "code": "KL",
+         "name": "KLM"
+        }
+       ],
+       "primary": "KL",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1070,
+       "path": [
+        "PDX",
+        "JFK",
+        "AMS",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-15 07:10",
+       "arrive": "2026-12-16 10:00",
+       "layovers": [
+        {
+         "id": "JFK",
+         "min": 91
+        },
+        {
+         "id": "AMS",
+         "min": 145
+        }
+       ],
+       "flightNumbers": [
+        "DL 451",
+        "KL 642",
+        "KL 1613"
+       ],
+       "top": false
+      },
+      {
+       "price": 2550,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "EN",
+         "name": "Air Dolomiti"
+        }
+       ],
+       "primary": "UA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 1085,
+       "path": [
+        "PDX",
+        "ORD",
+        "FRA",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-15 07:00",
+       "arrive": "2026-12-16 10:05",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 128
+        },
+        {
+         "id": "FRA",
+         "min": 135
+        }
+       ],
+       "flightNumbers": [
+        "UA 2306",
+        "UA 944",
+        "EN 270"
+       ],
+       "top": true
+      },
+      {
+       "price": 2554,
        "airlines": [
         {
          "code": "AC",
@@ -18312,49 +18363,7 @@
        "top": false
       },
       {
-       "price": 2536,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        },
-        {
-         "code": "EN",
-         "name": "Air Dolomiti"
-        }
-       ],
-       "primary": "UA",
-       "mixed": true,
-       "stops": 2,
-       "durationMin": 1002,
-       "path": [
-        "PDX",
-        "ORD",
-        "MUC",
-        "MXP"
-       ],
-       "dest": "MXP",
-       "depart": "2026-12-15 10:43",
-       "arrive": "2026-12-16 12:25",
-       "layovers": [
-        {
-         "id": "ORD",
-         "min": 71
-        },
-        {
-         "id": "MUC",
-         "min": 100
-        }
-       ],
-       "flightNumbers": [
-        "UA 1923",
-        "UA 953",
-        "EN 1854"
-       ],
-       "top": true
-      },
-      {
-       "price": 2544,
+       "price": 2554,
        "airlines": [
         {
          "code": "AC",
@@ -18400,7 +18409,7 @@
        "top": false
       },
       {
-       "price": 2620,
+       "price": 2631,
        "airlines": [
         {
          "code": "UA",
@@ -18442,7 +18451,7 @@
        "top": false
       },
       {
-       "price": 2624,
+       "price": 2634,
        "airlines": [
         {
          "code": "UA",
@@ -18488,7 +18497,7 @@
        "top": false
       },
       {
-       "price": 2624,
+       "price": 2634,
        "airlines": [
         {
          "code": "UA",
@@ -18530,7 +18539,7 @@
        "top": false
       },
       {
-       "price": 2624,
+       "price": 2634,
        "airlines": [
         {
          "code": "UA",
@@ -18574,20 +18583,146 @@
         "EN 1856"
        ],
        "top": false
+      },
+      {
+       "price": 2635,
+       "airlines": [
+        {
+         "code": "DL",
+         "name": "Delta"
+        },
+        {
+         "code": "KL",
+         "name": "KLM"
+        }
+       ],
+       "primary": "DL",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 928,
+       "path": [
+        "PDX",
+        "SEA",
+        "AMS",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-15 11:32",
+       "arrive": "2026-12-16 12:00",
+       "layovers": [
+        {
+         "id": "SEA",
+         "min": 110
+        },
+        {
+         "id": "AMS",
+         "min": 55
+        }
+       ],
+       "flightNumbers": [
+        "DL 3818",
+        "DL 142",
+        "KL 1597"
+       ],
+       "top": false
+      },
+      {
+       "price": 2636,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "SN",
+         "name": "Brussels Airlines"
+        }
+       ],
+       "primary": "UA",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 997,
+       "path": [
+        "PDX",
+        "ORD",
+        "BRU",
+        "LIN"
+       ],
+       "dest": "LIN",
+       "depart": "2026-12-15 10:43",
+       "arrive": "2026-12-16 12:20",
+       "layovers": [
+        {
+         "id": "ORD",
+         "min": 61
+        },
+        {
+         "id": "BRU",
+         "min": 120
+        }
+       ],
+       "flightNumbers": [
+        "UA 1923",
+        "UA 972",
+        "SN 3147"
+       ],
+       "top": false
+      },
+      {
+       "price": 2745,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        },
+        {
+         "code": "LH",
+         "name": "Lufthansa"
+        },
+        {
+         "code": "EN",
+         "name": "Air Dolomiti"
+        }
+       ],
+       "primary": "LH",
+       "mixed": true,
+       "stops": 2,
+       "durationMin": 945,
+       "path": [
+        "PDX",
+        "DEN",
+        "FRA",
+        "MXP"
+       ],
+       "dest": "MXP",
+       "depart": "2026-12-15 13:15",
+       "arrive": "2026-12-16 14:00",
+       "layovers": [
+        {
+         "id": "DEN",
+         "min": 40
+        },
+        {
+         "id": "FRA",
+         "min": 110
+        }
+       ],
+       "flightNumbers": [
+        "UA 2064",
+        "LH 447",
+        "EN 250"
+       ],
+       "top": false
       }
      ],
      "google": {
-      "lowest": 2012,
+      "lowest": 2253,
       "level": "high",
       "typical": [
        720,
        1800
       ],
       "history": [
-       [
-        1789628400,
-        1470
-       ],
        [
         1789714800,
         1627
@@ -18822,28 +18957,107 @@
        ],
        [
         1794729600,
-        1673
+        1736
        ],
        [
         1794816000,
-        2012
+        1736
+       ],
+       [
+        1794902400,
+        2253
        ]
       ]
      },
      "url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoyEgoyMDI2LTEyLTE1KAJqBwgBEgNQRFhyBwgBEgNNWFByBwgBEgNMSU5yBwgBEgNCR1kaMhIKMjAyNy0wMS0wMigCagcIARIDTVhQagcIARIDTElOagcIARIDQkdZcgcIARIDUERYQAFIAXABmAEB&tfu=EgIIAQ"
     }
    },
-   "fetchedAt": "2026-11-16T23:26:33.889Z"
+   "fetchedAt": "2026-11-17T22:29:35.380Z"
   },
   "pdx-bay-area": {
    "pairs": {
     "2026-12-17_2026-12-20": {
      "outbound": "2026-12-17",
      "return": "2026-12-20",
-     "fetchedAt": "2026-11-16T06:16:06.302Z",
+     "fetchedAt": "2026-11-17T22:29:45.743Z",
      "options": [
       {
-       "price": 223,
+       "price": 222,
+       "airlines": [
+        {
+         "code": "WN",
+         "name": "Southwest"
+        }
+       ],
+       "primary": "WN",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 105,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2026-12-17 05:55",
+       "arrive": "2026-12-17 07:40",
+       "layovers": [],
+       "flightNumbers": [
+        "WN 3245"
+       ],
+       "top": true
+      },
+      {
+       "price": 228,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        }
+       ],
+       "primary": "UA",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 114,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2026-12-17 13:31",
+       "arrive": "2026-12-17 15:25",
+       "layovers": [],
+       "flightNumbers": [
+        "UA 751"
+       ],
+       "top": true
+      },
+      {
+       "price": 237,
+       "airlines": [
+        {
+         "code": "WN",
+         "name": "Southwest"
+        }
+       ],
+       "primary": "WN",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 105,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2026-12-17 21:25",
+       "arrive": "2026-12-17 23:10",
+       "layovers": [],
+       "flightNumbers": [
+        "WN 4064"
+       ],
+       "top": false
+      },
+      {
+       "price": 243,
        "airlines": [
         {
          "code": "F9",
@@ -18875,332 +19089,7 @@
        "top": false
       },
       {
-       "price": 232,
-       "airlines": [
-        {
-         "code": "WN",
-         "name": "Southwest"
-        }
-       ],
-       "primary": "WN",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 105,
-       "path": [
-        "PDX",
-        "OAK"
-       ],
-       "dest": "OAK",
-       "depart": "2026-12-17 05:55",
-       "arrive": "2026-12-17 07:40",
-       "layovers": [],
-       "flightNumbers": [
-        "WN 3245"
-       ],
-       "top": true
-      },
-      {
-       "price": 232,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        }
-       ],
-       "primary": "UA",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 114,
-       "path": [
-        "PDX",
-        "SFO"
-       ],
-       "dest": "SFO",
-       "depart": "2026-12-17 13:31",
-       "arrive": "2026-12-17 15:25",
-       "layovers": [],
-       "flightNumbers": [
-        "UA 751"
-       ],
-       "top": true
-      },
-      {
-       "price": 232,
-       "airlines": [
-        {
-         "code": "WN",
-         "name": "Southwest"
-        }
-       ],
-       "primary": "WN",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 105,
-       "path": [
-        "PDX",
-        "OAK"
-       ],
-       "dest": "OAK",
-       "depart": "2026-12-17 21:25",
-       "arrive": "2026-12-17 23:10",
-       "layovers": [],
-       "flightNumbers": [
-        "WN 4064"
-       ],
-       "top": true
-      },
-      {
-       "price": 243,
-       "airlines": [
-        {
-         "code": "WN",
-         "name": "Southwest"
-        }
-       ],
-       "primary": "WN",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 105,
-       "path": [
-        "PDX",
-        "OAK"
-       ],
-       "dest": "OAK",
-       "depart": "2026-12-17 17:30",
-       "arrive": "2026-12-17 19:15",
-       "layovers": [],
-       "flightNumbers": [
-        "WN 3985"
-       ],
-       "top": true
-      },
-      {
-       "price": 252,
-       "airlines": [
-        {
-         "code": "WN",
-         "name": "Southwest"
-        }
-       ],
-       "primary": "WN",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 105,
-       "path": [
-        "PDX",
-        "OAK"
-       ],
-       "dest": "OAK",
-       "depart": "2026-12-17 10:30",
-       "arrive": "2026-12-17 12:15",
-       "layovers": [],
-       "flightNumbers": [
-        "WN 2371"
-       ],
-       "top": true
-      },
-      {
-       "price": 267,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        }
-       ],
-       "primary": "UA",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 121,
-       "path": [
-        "PDX",
-        "SFO"
-       ],
-       "dest": "SFO",
-       "depart": "2026-12-17 07:29",
-       "arrive": "2026-12-17 09:30",
-       "layovers": [],
-       "flightNumbers": [
-        "UA 2818"
-       ],
-       "top": false
-      },
-      {
-       "price": 269,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        }
-       ],
-       "primary": "UA",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 119,
-       "path": [
-        "PDX",
-        "SFO"
-       ],
-       "dest": "SFO",
-       "depart": "2026-12-17 19:16",
-       "arrive": "2026-12-17 21:15",
-       "layovers": [],
-       "flightNumbers": [
-        "UA 2615"
-       ],
-       "top": false
-      },
-      {
-       "price": 296,
-       "airlines": [
-        {
-         "code": "UA",
-         "name": "United"
-        }
-       ],
-       "primary": "UA",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 123,
-       "path": [
-        "PDX",
-        "SFO"
-       ],
-       "dest": "SFO",
-       "depart": "2026-12-17 05:30",
-       "arrive": "2026-12-17 07:33",
-       "layovers": [],
-       "flightNumbers": [
-        "UA 5889"
-       ],
-       "top": false
-      },
-      {
-       "price": 312,
-       "airlines": [
-        {
-         "code": "AS",
-         "name": "Alaska"
-        }
-       ],
-       "primary": "AS",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 122,
-       "path": [
-        "PDX",
-        "SFO"
-       ],
-       "dest": "SFO",
-       "depart": "2026-12-17 07:15",
-       "arrive": "2026-12-17 09:17",
-       "layovers": [],
-       "flightNumbers": [
-        "AS 526"
-       ],
-       "top": false
-      },
-      {
-       "price": 312,
-       "airlines": [
-        {
-         "code": "AS",
-         "name": "Alaska"
-        }
-       ],
-       "primary": "AS",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 121,
-       "path": [
-        "PDX",
-        "SFO"
-       ],
-       "dest": "SFO",
-       "depart": "2026-12-17 10:50",
-       "arrive": "2026-12-17 12:51",
-       "layovers": [],
-       "flightNumbers": [
-        "AS 205"
-       ],
-       "top": false
-      },
-      {
-       "price": 312,
-       "airlines": [
-        {
-         "code": "AS",
-         "name": "Alaska"
-        }
-       ],
-       "primary": "AS",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 121,
-       "path": [
-        "PDX",
-        "SFO"
-       ],
-       "dest": "SFO",
-       "depart": "2026-12-17 14:45",
-       "arrive": "2026-12-17 16:46",
-       "layovers": [],
-       "flightNumbers": [
-        "AS 236"
-       ],
-       "top": false
-      },
-      {
-       "price": 312,
-       "airlines": [
-        {
-         "code": "AS",
-         "name": "Alaska"
-        }
-       ],
-       "primary": "AS",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 122,
-       "path": [
-        "PDX",
-        "SFO"
-       ],
-       "dest": "SFO",
-       "depart": "2026-12-17 17:53",
-       "arrive": "2026-12-17 19:55",
-       "layovers": [],
-       "flightNumbers": [
-        "AS 1393"
-       ],
-       "top": false
-      },
-      {
-       "price": 312,
-       "airlines": [
-        {
-         "code": "AS",
-         "name": "Alaska"
-        }
-       ],
-       "primary": "AS",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 120,
-       "path": [
-        "PDX",
-        "SFO"
-       ],
-       "dest": "SFO",
-       "depart": "2026-12-17 21:30",
-       "arrive": "2026-12-17 23:30",
-       "layovers": [],
-       "flightNumbers": [
-        "AS 2112"
-       ],
-       "top": false
-      },
-      {
-       "price": 333,
+       "price": 247,
        "airlines": [
         {
          "code": "AS",
@@ -19222,10 +19111,10 @@
        "flightNumbers": [
         "AS 3071"
        ],
-       "top": false
+       "top": true
       },
       {
-       "price": 333,
+       "price": 247,
        "airlines": [
         {
          "code": "AS",
@@ -19250,7 +19139,257 @@
        "top": false
       },
       {
-       "price": 378,
+       "price": 257,
+       "airlines": [
+        {
+         "code": "WN",
+         "name": "Southwest"
+        }
+       ],
+       "primary": "WN",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 105,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2026-12-17 10:30",
+       "arrive": "2026-12-17 12:15",
+       "layovers": [],
+       "flightNumbers": [
+        "WN 2371"
+       ],
+       "top": false
+      },
+      {
+       "price": 267,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 122,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2026-12-17 07:15",
+       "arrive": "2026-12-17 09:17",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 526"
+       ],
+       "top": false
+      },
+      {
+       "price": 267,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 121,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2026-12-17 10:50",
+       "arrive": "2026-12-17 12:51",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 205"
+       ],
+       "top": false
+      },
+      {
+       "price": 267,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 121,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2026-12-17 14:45",
+       "arrive": "2026-12-17 16:46",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 236"
+       ],
+       "top": false
+      },
+      {
+       "price": 267,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 122,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2026-12-17 17:53",
+       "arrive": "2026-12-17 19:55",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 1393"
+       ],
+       "top": false
+      },
+      {
+       "price": 267,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 120,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2026-12-17 21:30",
+       "arrive": "2026-12-17 23:30",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 2112"
+       ],
+       "top": false
+      },
+      {
+       "price": 272,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        }
+       ],
+       "primary": "UA",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 121,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2026-12-17 07:29",
+       "arrive": "2026-12-17 09:30",
+       "layovers": [],
+       "flightNumbers": [
+        "UA 2818"
+       ],
+       "top": false
+      },
+      {
+       "price": 277,
+       "airlines": [
+        {
+         "code": "WN",
+         "name": "Southwest"
+        }
+       ],
+       "primary": "WN",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 105,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2026-12-17 17:30",
+       "arrive": "2026-12-17 19:15",
+       "layovers": [],
+       "flightNumbers": [
+        "WN 3985"
+       ],
+       "top": false
+      },
+      {
+       "price": 278,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        }
+       ],
+       "primary": "UA",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 119,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2026-12-17 19:16",
+       "arrive": "2026-12-17 21:15",
+       "layovers": [],
+       "flightNumbers": [
+        "UA 2615"
+       ],
+       "top": false
+      },
+      {
+       "price": 288,
+       "airlines": [
+        {
+         "code": "UA",
+         "name": "United"
+        }
+       ],
+       "primary": "UA",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 123,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2026-12-17 05:30",
+       "arrive": "2026-12-17 07:33",
+       "layovers": [],
+       "flightNumbers": [
+        "UA 5889"
+       ],
+       "top": false
+      },
+      {
+       "price": 307,
        "airlines": [
         {
          "code": "AS",
@@ -19276,21 +19415,13 @@
       }
      ],
      "google": {
-      "lowest": 223,
+      "lowest": 222,
       "level": "typical",
       "typical": [
        140,
        370
       ],
       "history": [
-       [
-        1789542000,
-        247
-       ],
-       [
-        1789628400,
-        237
-       ],
        [
         1789714800,
         237
@@ -19526,6 +19657,14 @@
        [
         1794729600,
         223
+       ],
+       [
+        1794816000,
+        222
+       ],
+       [
+        1794902400,
+        222
        ]
       ]
      },
@@ -20292,67 +20431,10 @@
     "2027-02-11_2027-02-14": {
      "outbound": "2027-02-11",
      "return": "2027-02-14",
-     "fetchedAt": "2026-11-16T06:16:06.393Z",
+     "fetchedAt": "2026-11-17T22:29:49.327Z",
      "options": [
       {
-       "price": 223,
-       "airlines": [
-        {
-         "code": "F9",
-         "name": "Frontier"
-        }
-       ],
-       "primary": "F9",
-       "mixed": false,
-       "stops": 1,
-       "durationMin": 486,
-       "path": [
-        "PDX",
-        "DEN",
-        "SFO"
-       ],
-       "dest": "SFO",
-       "depart": "2027-02-11 16:29",
-       "arrive": "2027-02-12 00:35",
-       "layovers": [
-        {
-         "id": "DEN",
-         "min": 161
-        }
-       ],
-       "flightNumbers": [
-        "F9 1790",
-        "F9 3439"
-       ],
-       "top": false
-      },
-      {
-       "price": 232,
-       "airlines": [
-        {
-         "code": "WN",
-         "name": "Southwest"
-        }
-       ],
-       "primary": "WN",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 105,
-       "path": [
-        "PDX",
-        "OAK"
-       ],
-       "dest": "OAK",
-       "depart": "2027-02-11 06:00",
-       "arrive": "2027-02-11 07:45",
-       "layovers": [],
-       "flightNumbers": [
-        "WN 2945"
-       ],
-       "top": true
-      },
-      {
-       "price": 232,
+       "price": 227,
        "airlines": [
         {
          "code": "UA",
@@ -20377,7 +20459,7 @@
        "top": true
       },
       {
-       "price": 232,
+       "price": 227,
        "airlines": [
         {
          "code": "AS",
@@ -20402,32 +20484,7 @@
        "top": true
       },
       {
-       "price": 232,
-       "airlines": [
-        {
-         "code": "WN",
-         "name": "Southwest"
-        }
-       ],
-       "primary": "WN",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 105,
-       "path": [
-        "PDX",
-        "OAK"
-       ],
-       "dest": "OAK",
-       "depart": "2027-02-11 12:25",
-       "arrive": "2027-02-11 14:10",
-       "layovers": [],
-       "flightNumbers": [
-        "WN 590"
-       ],
-       "top": false
-      },
-      {
-       "price": 232,
+       "price": 227,
        "airlines": [
         {
          "code": "UA",
@@ -20452,7 +20509,7 @@
        "top": false
       },
       {
-       "price": 232,
+       "price": 227,
        "airlines": [
         {
          "code": "AS",
@@ -20477,7 +20534,7 @@
        "top": false
       },
       {
-       "price": 232,
+       "price": 227,
        "airlines": [
         {
          "code": "UA",
@@ -20502,57 +20559,7 @@
        "top": false
       },
       {
-       "price": 232,
-       "airlines": [
-        {
-         "code": "AS",
-         "name": "Alaska"
-        }
-       ],
-       "primary": "AS",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 107,
-       "path": [
-        "PDX",
-        "OAK"
-       ],
-       "dest": "OAK",
-       "depart": "2027-02-11 19:39",
-       "arrive": "2027-02-11 21:26",
-       "layovers": [],
-       "flightNumbers": [
-        "AS 2104"
-       ],
-       "top": false
-      },
-      {
-       "price": 232,
-       "airlines": [
-        {
-         "code": "WN",
-         "name": "Southwest"
-        }
-       ],
-       "primary": "WN",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 110,
-       "path": [
-        "PDX",
-        "OAK"
-       ],
-       "dest": "OAK",
-       "depart": "2027-02-11 20:55",
-       "arrive": "2027-02-11 22:45",
-       "layovers": [],
-       "flightNumbers": [
-        "WN 2707"
-       ],
-       "top": false
-      },
-      {
-       "price": 239,
+       "price": 227,
        "airlines": [
         {
          "code": "UA",
@@ -20577,7 +20584,107 @@
        "top": false
       },
       {
-       "price": 243,
+       "price": 227,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 107,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2027-02-11 19:39",
+       "arrive": "2027-02-11 21:26",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 2104"
+       ],
+       "top": false
+      },
+      {
+       "price": 237,
+       "airlines": [
+        {
+         "code": "WN",
+         "name": "Southwest"
+        }
+       ],
+       "primary": "WN",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 105,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2027-02-11 06:00",
+       "arrive": "2027-02-11 07:45",
+       "layovers": [],
+       "flightNumbers": [
+        "WN 2945"
+       ],
+       "top": true
+      },
+      {
+       "price": 237,
+       "airlines": [
+        {
+         "code": "WN",
+         "name": "Southwest"
+        }
+       ],
+       "primary": "WN",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 105,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2027-02-11 12:25",
+       "arrive": "2027-02-11 14:10",
+       "layovers": [],
+       "flightNumbers": [
+        "WN 590"
+       ],
+       "top": false
+      },
+      {
+       "price": 237,
+       "airlines": [
+        {
+         "code": "WN",
+         "name": "Southwest"
+        }
+       ],
+       "primary": "WN",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 110,
+       "path": [
+        "PDX",
+        "OAK"
+       ],
+       "dest": "OAK",
+       "depart": "2027-02-11 20:55",
+       "arrive": "2027-02-11 22:45",
+       "layovers": [],
+       "flightNumbers": [
+        "WN 2707"
+       ],
+       "top": false
+      },
+      {
+       "price": 267,
        "airlines": [
         {
          "code": "AS",
@@ -20602,7 +20709,7 @@
        "top": false
       },
       {
-       "price": 243,
+       "price": 267,
        "airlines": [
         {
          "code": "AS",
@@ -20627,7 +20734,7 @@
        "top": false
       },
       {
-       "price": 277,
+       "price": 287,
        "airlines": [
         {
          "code": "AS",
@@ -20652,32 +20759,7 @@
        "top": false
       },
       {
-       "price": 277,
-       "airlines": [
-        {
-         "code": "AS",
-         "name": "Alaska"
-        }
-       ],
-       "primary": "AS",
-       "mixed": false,
-       "stops": 0,
-       "durationMin": 112,
-       "path": [
-        "PDX",
-        "SFO"
-       ],
-       "dest": "SFO",
-       "depart": "2027-02-11 21:35",
-       "arrive": "2027-02-11 23:27",
-       "layovers": [],
-       "flightNumbers": [
-        "AS 2038"
-       ],
-       "top": false
-      },
-      {
-       "price": 293,
+       "price": 307,
        "airlines": [
         {
          "code": "AS",
@@ -20702,7 +20784,32 @@
        "top": false
       },
       {
-       "price": 308,
+       "price": 307,
+       "airlines": [
+        {
+         "code": "AS",
+         "name": "Alaska"
+        }
+       ],
+       "primary": "AS",
+       "mixed": false,
+       "stops": 0,
+       "durationMin": 112,
+       "path": [
+        "PDX",
+        "SFO"
+       ],
+       "dest": "SFO",
+       "depart": "2027-02-11 21:35",
+       "arrive": "2027-02-11 23:27",
+       "layovers": [],
+       "flightNumbers": [
+        "AS 2038"
+       ],
+       "top": false
+      },
+      {
+       "price": 314,
        "airlines": [
         {
          "code": "UA",
@@ -20728,21 +20835,13 @@
       }
      ],
      "google": {
-      "lowest": 223,
+      "lowest": 227,
       "level": "typical",
       "typical": [
        160,
        320
       ],
       "history": [
-       [
-        1789542000,
-        199
-       ],
-       [
-        1789628400,
-        183
-       ],
        [
         1789714800,
         183
@@ -20978,13 +21077,21 @@
        [
         1794729600,
         223
+       ],
+       [
+        1794816000,
+        223
+       ],
+       [
+        1794902400,
+        227
        ]
       ]
      },
      "url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhopEgoyMDI3LTAyLTExKAFqBwgBEgNQRFhyBwgBEgNTRk9yBwgBEgNPQUsaKRIKMjAyNy0wMi0xNCgBagcIARIDU0ZPagcIARIDT0FLcgcIARIDUERYQAFIAXABmAEB&tfu=EgIIAQ"
     }
    },
-   "fetchedAt": "2026-11-16T23:26:45.173Z"
+   "fetchedAt": "2026-11-17T22:29:49.327Z"
   }
  }
 }
