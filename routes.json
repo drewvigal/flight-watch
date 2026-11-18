@@ -54,10 +54,11 @@
       "returnDates": [
         "2027-01-01",
         "2027-01-02",
-        "2027-01-03"
+        "2027-01-03",
+        "2027-01-04"
       ],
       "minNights": 14,
-      "checkEveryDays": 4
+      "checkEveryDays": 6
     },
     {
       "id": "pdx-bay-area",
@@ -85,7 +86,7 @@
         "Thu"
       ],
       "maxDatePairs": 3,
-      "checkEveryDays": 2
+      "checkEveryDays": 3
     }
   ]
 }

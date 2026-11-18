@@ -50,7 +50,7 @@ Date pairs whose outbound date has passed are skipped automatically.
 
 ## Search budget
 
-Every date pair on an enabled route costs one SerpApi search each time it is checked. The free plan allows 250 a month. The current config tracks 21 Milan date pairs every fourth day and 3 Bay Area pairs every second day, about 209 searches a month. `node scripts/fetch.mjs --dry-run` prints the count for the current config. Before each run the fetcher checks the account's remaining searches (that check is free) and stops if the run would dip into `settings.monthlySearchReserve`.
+Every date pair on an enabled route costs one SerpApi search each time it is checked. The free plan allows 250 a month. The current config tracks 28 Milan date pairs every sixth day and 3 Bay Area pairs every third day, about 176 searches a month. `node scripts/fetch.mjs --dry-run` prints the count for the current config. Before each run the fetcher checks the account's remaining searches (that check is free) and stops if the run would dip into `settings.monthlySearchReserve`.
 
 ## What "mixed airlines" means
 
