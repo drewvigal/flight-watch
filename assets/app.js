@@ -4,7 +4,7 @@ const $ = (sel, el = document) => el.querySelector(sel);
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const DAY = 86400000;
 
-const state = { maxStops: 9, preferredOnly: false, showMixed: true, routes: {} };
+const state = { maxStops: 9, preferredOnly: false, showMixed: true, airline: 'all', routes: {} };
 let config, history;
 
 // ---------- formatting ----------
@@ -54,10 +54,27 @@ const rankOf = (code) => {
   return i === -1 ? 999 : i + 1;
 };
 
+const watchCodes = () => new Set((config.watchAirlines ?? []).map((a) => a.code));
+const watchNames = () => (config.watchAirlines ?? []).map((a) => a.name).join(' or ');
+/** Airline selector: all, the watched group, or one airline code. */
+const airlineOk = (o) => {
+  if (state.airline === 'all') return true;
+  if (state.airline === 'watch') { const w = watchCodes(); return o.airlines.some((a) => w.has(a.code)); }
+  return o.airlines.some((a) => a.code === state.airline);
+};
+/** A date pair's options: the normal cheapest list plus any watched-airline search. */
+const allOptions = (p) => {
+  const extra = p.airlineOptions?.options ?? [];
+  if (!extra.length) return p.options;
+  const seen = new Set(p.options.map((o) => o.price + '|' + (o.flightNumbers ?? []).join(',')));
+  return [...p.options, ...extra.filter((o) => !seen.has(o.price + '|' + (o.flightNumbers ?? []).join(',')))];
+};
+
 const passes = (o) =>
   o.stops <= state.maxStops &&
   (state.showMixed || !o.mixed) &&
-  (!state.preferredOnly || rankOf(o.primary) !== 999);
+  (!state.preferredOnly || rankOf(o.primary) !== 999) &&
+  airlineOk(o);
 
 /** Lowest price in one history observation, following the stops and mixed filters. */
 function observedLow(obs) {
@@ -91,7 +108,7 @@ function routeView(route) {
   const selectedKeys = new Set(selected.map((p) => p.key));
 
   const options = selected
-    .flatMap((p) => p.options.map((o) => ({ ...o, pair: p })))
+    .flatMap((p) => allOptions(p).map((o) => ({ ...o, pair: p })))
     .filter(passes);
   options.sort(ui.sort === 'rank'
     ? (a, b) => rankOf(a.primary) - rankOf(b.primary) || a.price - b.price
@@ -125,7 +142,7 @@ function routeView(route) {
 
   // Cheapest matching fare for each selected date pair.
   const byDates = selected.map((p) => {
-    const best = p.options.filter(passes).reduce((m, o) => (!m || o.price < m.price ? o : m), null);
+    const best = allOptions(p).filter(passes).reduce((m, o) => (!m || o.price < m.price ? o : m), null);
     return { pair: p, best };
   }).filter((r) => r.best).sort((a, b) => a.best.price - b.best.price);
 
@@ -276,7 +293,16 @@ function renderTable(view, rerender) {
     el('div', { class: 'sort' }, 'Sort by', sortBtn('price', 'Price'), sortBtn('rank', 'My airlines')),
   );
   if (!options.length) {
-    return el('div', {}, head, el('p', { class: 'empty' }, 'No current fares match these filters. Try allowing more stops or mixed airlines.'));
+    let msg = 'No current fares match these filters. Try allowing more stops or mixed airlines.';
+    if (state.airline === 'watch') {
+      const checked = view.selected.filter((p) => p.airlineOptions).length;
+      msg = `No ${watchNames()} fares for these dates. ` + (checked
+        ? `Dedicated searches for these airlines have run on ${checked} of the ${view.selected.length} date combinations shown and found nothing that fits these filters.`
+        : 'Dedicated searches for these airlines do not cover the dates shown.');
+    } else if (state.airline !== 'all') {
+      msg = 'No current fares on this airline match these filters for the dates shown.';
+    }
+    return el('div', {}, head, el('p', { class: 'empty' }, msg));
   }
   const table = el('table', { class: 'options' },
     el('thead', {}, el('tr', {},
@@ -400,7 +426,7 @@ function renderRoute(route, card) {
   card.replaceChildren(...[
     el('h2', {}, route.name), el('p', { class: 'sub' }, sub),
     chips, el('div', { class: 'tiles' }, nowTile, lowTile), datesList, chartWrap,
-    state.preferredOnly && el('p', { class: 'basis muted' }, 'The chart includes all airlines; the airline filter applies to the tile and table.'),
+    (state.preferredOnly || state.airline !== 'all') && el('p', { class: 'basis muted' }, 'The chart includes all airlines; airline filters apply to the tile, the dates list and the table.'),
     renderTable(view, rerender),
     other,
   ].filter(Boolean));
@@ -438,8 +464,9 @@ function renderAll() {
 function readFilters() {
   state.maxStops = Number($('#f-stops').value);
   state.preferredOnly = $('#f-preferred').checked;
+  state.airline = $('#f-airline').value;
   state.showMixed = $('#f-mixed').checked;
-  try { localStorage.setItem('fw-filters', JSON.stringify({ s: state.maxStops, p: state.preferredOnly, m: state.showMixed })); } catch {}
+  try { localStorage.setItem('fw-filters', JSON.stringify({ s: state.maxStops, p: state.preferredOnly, m: state.showMixed, a: state.airline })); } catch {}
   renderAll();
 }
 
@@ -451,9 +478,22 @@ async function start() {
     $('#updated').textContent = 'Could not load fare data. ' + e.message;
     return;
   }
+  // Airline selector: all, the watched group, then every airline in the data.
+  const found = new Map((config.watchAirlines ?? []).map((a) => [a.code, a.name]));
+  for (const slot of Object.values(history.latest ?? {})) {
+    for (const p of Object.values(slot.pairs ?? {})) {
+      for (const o of allOptions(p)) for (const a of o.airlines) if (!found.has(a.code)) found.set(a.code, a.name);
+    }
+  }
+  const airlineSelect = $('#f-airline');
+  if (config.watchAirlines?.length) airlineSelect.append(el('option', { value: 'watch' }, watchNames()));
+  for (const [code, name] of [...found].sort((a, b) => a[1].localeCompare(b[1]))) {
+    airlineSelect.append(el('option', { value: code }, name));
+  }
   try {
     const saved = JSON.parse(localStorage.getItem('fw-filters') ?? 'null');
-    if (saved) { $('#f-stops').value = String(saved.s); $('#f-preferred').checked = !!saved.p; $('#f-mixed').checked = saved.m !== false; }
+    if (saved) { $('#f-stops').value = String(saved.s); $('#f-preferred').checked = !!saved.p; $('#f-mixed').checked = saved.m !== false;
+      if (saved.a && [...airlineSelect.options].some((o) => o.value === saved.a)) airlineSelect.value = saved.a; }
   } catch {}
   const names = config.preferredAirlines.map((a) => a.name).join(', ');
   $('#f-preferred').parentElement.title = 'Your ranking: ' + names;

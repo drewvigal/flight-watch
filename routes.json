@@ -53,12 +53,14 @@
       },
       "returnDates": [
         "2027-01-01",
-        "2027-01-02",
         "2027-01-03",
         "2027-01-04"
       ],
       "minNights": 14,
-      "checkEveryDays": 7
+      "checkEveryDays": 7,
+      "watchAirlinesOnReturnDates": [
+        "2027-01-01"
+      ]
     },
     {
       "id": "pdx-bay-area",
@@ -87,6 +89,16 @@
       ],
       "maxDatePairs": 3,
       "checkEveryDays": 3
+    }
+  ],
+  "watchAirlines": [
+    {
+      "code": "FI",
+      "name": "Icelandair"
+    },
+    {
+      "code": "NO",
+      "name": "Neos"
     }
   ]
 }

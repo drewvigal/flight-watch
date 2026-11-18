@@ -118,7 +118,7 @@ async function getAccount(key) {
   return json;
 }
 
-async function searchFlights(key, route, pair, currency) {
+async function searchFlights(key, route, pair, currency, airlines) {
   // stops: 0 any, 1 nonstop only, 2 one stop or fewer, 3 two stops or fewer
   const stops = route.maxStops === 0 ? 1 : route.maxStops === 1 ? 2 : route.maxStops === 2 ? 3 : 0;
   const params = new URLSearchParams({
@@ -134,6 +134,7 @@ async function searchFlights(key, route, pair, currency) {
     gl: 'us',
     api_key: key,
   });
+  if (airlines?.length) params.set('include_airlines', airlines.join(','));
   const { status, json } = await getJson('https://serpapi.com/search?' + params);
   if (json.error) return { error: json.error };
   if (status !== 200) return { error: 'HTTP ' + status };
@@ -231,6 +232,16 @@ async function main() {
       const due = onlyNew ? isNew : everything || isNew || (dayNumber + i) % every === 0;
       if (due) jobs.push({ route, pair, isNew });
     });
+    // Extra searches limited to the watched airlines, which rarely make the
+    // normal cheapest list, for the return dates the route names.
+    const watch = (config.watchAirlines ?? []).map((a) => a.code);
+    const watchPairs = watch.length ? pairs.filter((p) => route.watchAirlinesOnReturnDates?.includes(p.return)) : [];
+    perMonth += (watchPairs.length / every) * 31;
+    watchPairs.forEach((pair, i) => {
+      const isNew = !saved.latest?.[route.id]?.pairs?.[`${pair.outbound}_${pair.return}`]?.airlineOptions;
+      const due = onlyNew ? isNew : everything || isNew || (dayNumber + i + 3) % every === 0;
+      if (due) jobs.push({ route, pair, isNew, airlines: watch });
+    });
   }
   // New date pairs go first so they are not squeezed out by the per-run cap.
   jobs.sort((x, y) => Number(y.isNew) - Number(x.isNew));
@@ -238,7 +249,7 @@ async function main() {
   const planned = jobs.slice(0, cap);
 
   log(`Planned searches this run: ${planned.length}` + (jobs.length > planned.length ? ` (of ${jobs.length}; capped)` : ''));
-  for (const j of planned) log(`  ${j.route.id}  ${j.pair.outbound} to ${j.pair.return}`);
+  for (const j of planned) log(`  ${j.route.id}  ${j.pair.outbound} to ${j.pair.return}` + (j.airlines ? `  (only ${j.airlines.join(', ')})` : ''));
   log(`At one run a day the current config uses about ${Math.round(perMonth)} searches a month.`);
 
   if (dryRun) return;
@@ -259,13 +270,31 @@ async function main() {
     : { version: 1, updatedAt: null, observations: [], latest: {} };
 
   let ok = 0;
-  for (const { route, pair } of planned) {
+  for (const { route, pair, airlines } of planned) {
     const ts = new Date().toISOString();
     let result;
     try {
-      result = await searchFlights(key, route, pair, settings.currency);
+      result = await searchFlights(key, route, pair, settings.currency, airlines);
     } catch (e) {
       result = { error: e.message };
+    }
+    if (airlines) {
+      // Watched-airline search: saved beside the pair's normal options. "No
+      // results" is a real answer here, so it is recorded rather than retried.
+      const none = result.error && /hasn't returned any results/i.test(result.error);
+      if (result.error && !none) {
+        log(`  FAILED ${route.id} ${pair.outbound} (${airlines.join(', ')}): ${result.error}`);
+        continue;
+      }
+      const found = none ? [] : parseResponse(result.json).options;
+      const slot = (history.latest[route.id] ??= { pairs: {} });
+      const entry = (slot.pairs[`${pair.outbound}_${pair.return}`] ??= {
+        outbound: pair.outbound, return: pair.return, fetchedAt: ts, options: [], google: { history: [] }, url: null,
+      });
+      entry.airlineOptions = { fetchedAt: ts, airlines, options: found.slice(0, settings.keepOptionsPerDatePair) };
+      ok++;
+      log(`  ${route.id} ${pair.outbound} to ${pair.return} (${airlines.join(', ')}): ` + (found.length ? `from $${found[0].price} (${found.length} options)` : 'no flights'));
+      continue;
     }
     if (result.error) {
       log(`  FAILED ${route.id} ${pair.outbound}: ${result.error}`);
@@ -290,7 +319,9 @@ async function main() {
     });
     const slot = (history.latest[route.id] ??= { pairs: {} });
     slot.fetchedAt = ts;
+    const previous = slot.pairs[`${pair.outbound}_${pair.return}`];
     slot.pairs[`${pair.outbound}_${pair.return}`] = {
+      ...(previous?.airlineOptions ? { airlineOptions: previous.airlineOptions } : {}),
       outbound: pair.outbound,
       return: pair.return,
       fetchedAt: ts,
