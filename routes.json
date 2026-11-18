@@ -48,8 +48,8 @@
       "maxStops": 2,
       "preferredStops": 1,
       "window": {
-        "earliestDeparture": "2026-12-12",
-        "latestDeparture": "2026-12-18"
+        "earliestDeparture": "2026-12-05",
+        "latestDeparture": "2026-12-12"
       },
       "returnDates": [
         "2027-01-01",
@@ -58,7 +58,7 @@
         "2027-01-04"
       ],
       "minNights": 14,
-      "checkEveryDays": 6
+      "checkEveryDays": 7
     },
     {
       "id": "pdx-bay-area",
