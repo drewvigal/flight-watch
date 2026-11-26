@@ -48,8 +48,8 @@
       "maxStops": 2,
       "preferredStops": 1,
       "window": {
-        "earliestDeparture": "2026-12-05",
-        "latestDeparture": "2026-12-12"
+        "earliestDeparture": "2026-12-11",
+        "latestDeparture": "2026-12-17"
       },
       "returnDates": [
         "2027-01-01",
